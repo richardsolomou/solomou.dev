@@ -17,9 +17,9 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       ...seo({
-        title: "ras.sh",
+        title: "solomou.dev",
         description:
-          "A collection of side projects, experiments, and tools built with modern technologies",
+          "Full-Stack Engineer 👨‍💻, proud dad 👶, and coffee junkie ☕️",
       }),
     ],
     links: [
