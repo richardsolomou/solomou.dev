@@ -1,24 +1,22 @@
 {
-  "name": "@ras-sh/template-tanstack-start",
-  "version": "0.0.1",
+  "name": "solomou.dev",
+  "version": "1.0.0",
   "type": "module",
   "private": true,
-  "description": "Template for TanStack Start projects.",
-  "keywords": [],
-  "homepage": "https://ras.sh",
+  "homepage": "https://solomou.dev",
   "bugs": {
-    "url": "https://github.com/ras-sh/template-tanstack-start/issues",
-    "email": "hi@ras.sh"
+    "url": "https://github.com/richardsolomou/solomou.dev/issues",
+    "email": "richard@solomou.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ras-sh/template-tanstack-start"
+    "url": "https://github.com/richardsolomou/solomou.dev"
   },
   "license": "MIT",
   "author": {
     "name": "Richard Solomou",
-    "email": "hi@ras.sh",
-    "url": "https://ras.sh"
+    "email": "richard@solomou.dev",
+    "url": "https://solomou.dev"
   },
   "scripts": {
     "dev": "vite dev",
@@ -31,6 +29,7 @@
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource-variable/geist-mono": "^5.2.7",
+    "@phosphor-icons/react": "^2.1.10",
     "@ras-sh/ui": "^0.0.2",
     "@tanstack/react-router": "^1.132.47",
     "@tanstack/react-start": "^1.132.51",
