@@ -3,11 +3,13 @@ export const seo = ({
   description,
   keywords,
   image,
+  canonical,
 }: {
   title: string;
   description?: string;
   image?: string;
   keywords?: string;
+  canonical?: string;
 }) => {
   const tags = [
     { title },
@@ -20,6 +22,7 @@ export const seo = ({
     { name: "og:type", content: "website" },
     { name: "og:title", content: title },
     { name: "og:description", content: description },
+    ...(canonical ? [{ name: "og:url", content: canonical }] : []),
     ...(image
       ? [
           { name: "twitter:image", content: image },
