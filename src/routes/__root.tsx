@@ -1,4 +1,6 @@
 /// <reference types="vite/client" />
+import geistWoff2 from "@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url";
+import geistMonoWoff2 from "@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2?url";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import type * as React from "react";
 import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
@@ -32,6 +34,20 @@ export const Route = createRootRoute({
       ],
       links: [
         { rel: "stylesheet", href: appCss },
+        {
+          rel: "preload",
+          as: "font",
+          type: "font/woff2",
+          href: geistWoff2,
+          crossOrigin: "anonymous",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          type: "font/woff2",
+          href: geistMonoWoff2,
+          crossOrigin: "anonymous",
+        },
         { rel: "canonical", href: canonicalUrl },
         {
           rel: "apple-touch-icon",

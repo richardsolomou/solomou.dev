@@ -44,7 +44,7 @@ function Home() {
                 />
                 Keenious
               </a>{" "}
-              and the Founder of{" "}
+              and former Founder of{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
                 href="https://tarrasque.io"
