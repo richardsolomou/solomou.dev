@@ -1,17 +1,4 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["ultracite"],
-  "files": {
-    "includes": ["**", "!**/*.css", "!**/routeTree.gen.ts"]
-  },
-  "linter": {
-    "rules": {
-      "style": {
-        "noHeadElement": "off"
-      },
-      "performance": {
-        "noImgElement": "off"
-      }
-    }
-  }
+  "extends": ["ultracite/core", "ultracite/react"]
 }
