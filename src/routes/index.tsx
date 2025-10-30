@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Links } from "~/components/links";
+import { Projects } from "~/components/projects";
 import { TechStack } from "~/components/tech-stack";
 
 export const Route = createFileRoute("/")({
@@ -55,7 +56,7 @@ function Home() {
                   alt="Tarrasque.io"
                   className="inline h-3 w-auto"
                   height={12}
-                  src="/images/logos/tarrasqueio.webp"
+                  src="/images/logos/tarrasque.io.webp"
                   width={12}
                 />
                 Tarrasque.io
@@ -68,6 +69,11 @@ function Home() {
               hanging out with my cat 🐈‍⬛, or drinking coffee ☕️.
             </p>
           </div>
+        </section>
+
+        {/* Links */}
+        <section>
+          <Links />
         </section>
 
         {/* About */}
@@ -94,15 +100,18 @@ function Home() {
           </div>
         </section>
 
-        {/* Links */}
+        {/* Projects */}
         <section>
-          <Links />
+          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
+            Personal Projects
+          </h2>
+          <Projects />
         </section>
 
         {/* Tech Stack */}
         <section>
           <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
-            Technologies I use
+            Tech Stack
           </h2>
           <TechStack />
         </section>

@@ -104,24 +104,10 @@ export const EXPERIENCE = [
     location: "Tromsø, Norway (Remote)",
     period: "January 2023 - Present",
     description: [
-      "Architected and implemented innovative features using Next.js, NestJS, TypeScript, and PostgreSQL.",
-      "Orchestrated Kubernetes infrastructure on AWS and Azure, and streamlined local development with Docker.",
-      "Led development of complete AI-powered research assistant stack for enhanced article discovery.",
-      "Spearheaded end-to-end testing implementation and system optimization for performance and scalability.",
-    ],
-  },
-  {
-    id: "creator-tarrasque",
-    title: "Founder (acquired)",
-    company: "Tarrasque.io",
-    companyUrl: "https://tarrasque.io",
-    companyIcon: "/images/logos/tarrasqueio.webp",
-    location: "Nicosia, Cyprus",
-    period: "July 2020 - January 2025",
-    description: [
-      "Founded and led a B2C SaaS product serving 9,000+ users worldwide.",
-      "Built full-stack features using Next.js, NestJS, TypeScript, WebGL, and real-time WebSocket/GraphQL integrations.",
-      "Established CI/CD pipelines and led community building, marketing, and user experience initiatives.",
+      "Built features using Next.js, NestJS, TypeScript, and PostgreSQL for EdTech platform serving 50+ institutions.",
+      "Managed Kubernetes infrastructure on AWS and Azure, reducing deployment time by 90% with Docker for local development.",
+      "Led team building AI-powered research assistant from concept to production, increasing engagement by 200%.",
+      "Implemented end-to-end testing with Playwright and optimizations improving response times by 50%.",
     ],
   },
   {
@@ -130,11 +116,27 @@ export const EXPERIENCE = [
     company: "Keenious",
     companyUrl: "https://keenious.com",
     companyIcon: "/images/logos/keenious.webp",
+    companyIconPrint: "/images/logos/keenious.webp",
     location: "Tromsø, Norway (Remote)",
     period: "January 2021 - January 2023",
     description: [
-      "Built EdTech Microsoft Word add-in features using React, MobX, and Material UI with legacy browser support.",
-      "Led migration to GitHub Actions for automated CI/CD pipelines and delivered performance optimizations.",
+      "Built core web app and Microsoft Office add-ins using React, MobX, and Material UI (including IE11 support) for 30+ enterprise clients.",
+      "Led front-end architecture and component library efforts, setting code standards, performance budgets, and review practices.",
+      "Migrated to GitHub Actions CI/CD and automated release pipelines, reducing release cycles from weeks to days.",
+    ],
+  },
+  {
+    id: "creator-tarrasque",
+    title: "Founder (acquired)",
+    company: "Tarrasque.io",
+    companyUrl: "https://tarrasque.io",
+    companyIcon: "/images/logos/tarrasque.io.webp",
+    location: "Nicosia, Cyprus",
+    period: "July 2020 - January 2025",
+    description: [
+      "Founded and grew B2C SaaS from 0 to 9,000+ users across 20+ countries, leading to acquisition.",
+      "Built real-time collaborative features using Next.js, NestJS, TypeScript, WebGL, and WebSocket/GraphQL.",
+      "Handled all engineering, CI/CD, community management, marketing, and UX research.",
     ],
   },
   {
@@ -145,9 +147,9 @@ export const EXPERIENCE = [
     location: "Nicosia, Cyprus",
     period: "August 2018 - January 2021",
     description: [
-      "Led React/Webpack migration for the main SaaS product and implemented comprehensive Jest testing suite.",
-      "Established code standards, CI/CD pipelines through Azure, and mentored junior developers.",
-      "Served as Agile advocate while delivering performance improvements and scalability solutions.",
+      "Led React/Webpack migration and implemented Jest testing, increasing coverage from 0% to 70%.",
+      "Set engineering standards and mentored 5 developers while implementing Azure CI/CD pipelines.",
+      "Delivered performance optimizations reducing page load times by 40%.",
     ],
   },
   {
@@ -158,7 +160,7 @@ export const EXPERIENCE = [
     location: "Southampton, United Kingdom",
     period: "March 2018 - June 2018",
     description: [
-      "Developed React/Redux applications with comprehensive Jest testing and performance optimizations.",
+      "Built React/Redux applications with Jest testing, focusing on state management and performance.",
     ],
   },
   {
@@ -169,8 +171,8 @@ export const EXPERIENCE = [
     location: "Southampton, United Kingdom",
     period: "June 2016 - March 2018",
     description: [
-      "Architected scalable front-end applications and reusable component packages as technical subject matter expert.",
-      "Established unified design systems, coding standards, and provided developer training and consultation.",
+      "Built scalable front-end applications and reusable component packages used across 15+ client projects.",
+      "Created design systems and React/TypeScript standards, mentored 5+ developers.",
     ],
   },
   {
@@ -181,7 +183,7 @@ export const EXPERIENCE = [
     location: "Petersfield, United Kingdom",
     period: "April 2015 - June 2016",
     description: [
-      "Developed SaaS platform features in Agile environment with focus on design collaboration and system optimization.",
+      "Built SaaS features using modern JavaScript frameworks, working closely with design team on UI/UX.",
     ],
   },
   {
@@ -192,7 +194,7 @@ export const EXPERIENCE = [
     location: "Portsmouth, United Kingdom",
     period: "July 2013 - July 2014",
     description: [
-      "Developed full-stack applications, RESTful APIs, and self-service platform for students and staff.",
+      "Built full-stack applications and RESTful APIs serving 25,000+ students and staff.",
     ],
   },
   {
@@ -203,20 +205,20 @@ export const EXPERIENCE = [
     location: "Nicosia, Cyprus",
     period: "July 2012 - September 2012",
     description: [
-      "Created responsive websites using CSS3 and jQuery, contributed to client projects and design prototypes.",
+      "Created responsive websites using CSS3 and jQuery for multiple client projects.",
     ],
   },
-  // {
-  //   id: "web-developer-intern-netquest",
-  //   title: "Web Developer (Intern)",
-  //   company: "Netquest",
-  //   companyUrl: "https://netquest.cy",
-  //   location: "Nicosia, Cyprus",
-  //   period: "June 2008 - August 2008",
-  //   description: [
-  //     "Performed QA testing, created website layouts in Photoshop, and developed sites using HTML/CSS.",
-  //   ],
-  // },
+  {
+    id: "web-developer-intern-netquest",
+    title: "Web Developer (Intern)",
+    company: "Netquest",
+    companyUrl: "https://netquest.cy",
+    location: "Nicosia, Cyprus",
+    period: "June 2008 - August 2008",
+    description: [
+      "Performed QA testing and built website layouts using Photoshop, HTML, and CSS.",
+    ],
+  },
 ];
 
 export const EDUCATION = {
@@ -225,11 +227,38 @@ export const EDUCATION = {
   period: "September 2011 - June 2015",
   location: "Portsmouth, United Kingdom",
   achievements: [
-    "Developed an NFC-assisted student attendance monitoring system using AngularJS, Node.js, and MySQL",
-    "Represented university at Cisco University Challenge hackathon",
-    "Focused on web technologies, data structures and algorithms, functional programming, as well as neural networks and genetic algorithms",
+    "Built NFC student attendance system using AngularJS, Node.js, and MySQL for final year project",
+    "Competed at Cisco University Challenge hackathon",
+    "Focused on web technologies, algorithms, functional programming, and machine learning",
   ],
 };
+
+export const PROJECTS = [
+  {
+    name: "ras.sh",
+    url: "https://ras.sh",
+    description:
+      "My corner of the internet where I build open-source tools and experiments.",
+    tags: ["TypeScript", "React", "Node.js", "Open Source"],
+    icon: "/images/logos/ras.sh.webp",
+  },
+  {
+    name: "tro.gg",
+    url: "https://tro.gg",
+    description:
+      "AI-powered TTRPG campaign manager that organizes your session notes.",
+    tags: ["TanStack Start", "Convex", "AI SDK", "TypeScript"],
+    icon: "/images/logos/tro.gg.webp",
+  },
+  {
+    name: "tarrasque.io",
+    url: "https://tarrasque.io",
+    description:
+      "Virtual tabletop platform for D&D. Grew to 9,000+ users before acquisition.",
+    tags: ["Next.js", "NestJS", "WebGL", "WebSockets", "TypeScript"],
+    icon: "/images/logos/tarrasque.io.webp",
+  },
+];
 
 export const SKILLS = {
   Languages: ["TypeScript", "JavaScript", "Python", "SQL"],

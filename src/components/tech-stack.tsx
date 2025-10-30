@@ -1,55 +1,33 @@
-import { CaretDownIcon, CaretUpIcon } from "@phosphor-icons/react/dist/ssr";
-import { useState } from "react";
 import { STACK } from "~/lib/data";
 
 export function TechStack() {
-  const [expandedCategories, setExpandedCategories] = useState<
-    Record<string, boolean>
-  >({});
-
-  const toggleCategory = (category: string) => {
-    setExpandedCategories((prev) => ({
-      ...prev,
-      [category]: !prev[category],
-    }));
+  const getItemStyle = (index: number, total: number) => {
+    // Top 30% - favorites (strongest color)
+    if (index < Math.ceil(total * 0.3)) {
+      return "bg-indigo-400/20 text-zinc-200 border border-indigo-400/30";
+    }
+    // Next 30% - like (medium color)
+    if (index < Math.ceil(total * 0.6)) {
+      return "bg-zinc-700/50 text-zinc-300 border border-zinc-700/30";
+    }
+    // Rest - familiar with (subtle)
+    return "bg-zinc-800/30 text-zinc-400 border border-zinc-800/30";
   };
 
   return (
-    <div className="space-y-6">
+    <div className="grid gap-6 sm:grid-cols-2">
       {Object.entries(STACK).map(([category, tech]) => {
-        const isExpanded = expandedCategories[category];
-        const allTech = [...tech.visible, ...(isExpanded ? tech.hidden : [])];
+        const allTech = [...tech.visible, ...tech.hidden];
 
         return (
-          <div
-            className="rounded-lg border border-zinc-800/50 bg-zinc-900/30 p-4"
-            key={category}
-          >
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="font-bold text-sm text-zinc-200 uppercase tracking-wider">
-                {category}
-              </h3>
-              {tech.hidden.length > 0 && (
-                <button
-                  className="cursor-pointer rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-500 transition-colors hover:bg-zinc-700 hover:text-zinc-300"
-                  onClick={() => toggleCategory(category)}
-                  type="button"
-                >
-                  <span className="flex items-center gap-1">
-                    {isExpanded ? "Less" : "More"}
-                    {isExpanded ? (
-                      <CaretUpIcon className="h-3 w-3" />
-                    ) : (
-                      <CaretDownIcon className="h-3 w-3" />
-                    )}
-                  </span>
-                </button>
-              )}
-            </div>
+          <div className="space-y-3" key={category}>
+            <h3 className="font-semibold text-sm text-zinc-100 uppercase tracking-wider">
+              {category}
+            </h3>
             <div className="flex flex-wrap gap-2">
-              {allTech.map((item) => (
+              {allTech.map((item, index) => (
                 <span
-                  className="rounded bg-zinc-800 px-2 py-1 font-medium text-sm text-zinc-300"
+                  className={`rounded-md px-2 py-1 text-xs transition-colors ${getItemStyle(index, allTech.length)}`}
                   key={item}
                 >
                   {item}
