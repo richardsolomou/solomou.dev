@@ -6,12 +6,14 @@ import {
 import { Button } from "@ras-sh/ui/button";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Links } from "~/components/links";
-import { EDUCATION, EXPERIENCE, SKILLS } from "~/lib/data";
+import { EDUCATION, EXPERIENCE, PROJECTS, SKILLS } from "~/lib/data";
 import { PrintButton } from "../components/print-button";
 
 export const Route = createFileRoute("/cv")({
   component: CV,
 });
+
+const MAX_EXPERIENCE_ITEMS_PRINT = 6;
 
 function CV() {
   return (
@@ -38,7 +40,7 @@ function CV() {
       <header className="mb-10 flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left print:mb-6 print:gap-4">
         <img
           alt="Richard Solomou"
-          className="flex-shrink-0 rounded-full print:h-25 print:w-25"
+          className="shrink-0 rounded-full print:h-25 print:w-25"
           height={128}
           src="/images/richard-face.png"
           width={128}
@@ -78,14 +80,14 @@ function CV() {
         {/* Left Column - Experience */}
         <div className="lg:col-span-2 print:col-span-2">
           {/* Experience */}
-          <section className="mb-16 pb-4 print:mb-8">
+          <section className="mb-16 pb-4 print:mb-2">
             <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
               Experience
             </h2>
             <div className="space-y-10 print:space-y-3">
-              {EXPERIENCE.map((exp) => (
+              {EXPERIENCE.map((exp, index) => (
                 <div
-                  className="relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0"
+                  className={`relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0 ${index >= MAX_EXPERIENCE_ITEMS_PRINT ? "print:hidden" : ""}`}
                   key={exp.id}
                 >
                   <div className="-left-2.5 -top-1 absolute hidden h-4 w-4 rounded-full border-2 border-zinc-800 bg-zinc-600 sm:block print:hidden" />
@@ -140,8 +142,55 @@ function CV() {
             </div>
           </section>
 
+          {/* Projects */}
+          <section className="mb-16 print:mb-6">
+            <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
+              Personal Projects
+            </h2>
+            <div className="space-y-6 print:space-y-3">
+              {PROJECTS.map((project) => (
+                <div className="space-y-2 print:space-y-1" key={project.name}>
+                  <div className="flex items-center gap-2">
+                    {project.icon && (
+                      <img
+                        alt={project.name}
+                        className="h-5 w-5 rounded print:h-4 print:w-4"
+                        height={20}
+                        src={project.icon}
+                        width={20}
+                      />
+                    )}
+                    <h3 className="font-bold text-lg text-zinc-100 print:text-base">
+                      <a
+                        className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
+                        href={project.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {project.name}
+                      </a>
+                    </h3>
+                  </div>
+                  <p className="text-zinc-300 leading-relaxed print:text-sm">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 print:hidden">
+                    {project.tags.map((tag) => (
+                      <span
+                        className="rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-400"
+                        key={tag}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Education */}
-          <section>
+          <section className="mb-16 print:mb-6">
             <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
               Education
             </h2>
