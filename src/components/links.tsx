@@ -4,7 +4,7 @@ import { LINKS } from "~/lib/data";
 
 export function Links() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-6">
+    <div className="flex flex-wrap items-center justify-center gap-4">
       {LINKS.map((social) => (
         <Button
           asChild

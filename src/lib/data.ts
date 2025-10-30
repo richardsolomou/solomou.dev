@@ -241,6 +241,7 @@ export const PROJECTS = [
       "My corner of the internet where I build open-source tools and experiments.",
     tags: ["TypeScript", "React", "Node.js", "Open Source"],
     icon: "/images/logos/ras.sh.webp",
+    status: "open-source" as const,
   },
   {
     name: "tro.gg",
@@ -249,6 +250,7 @@ export const PROJECTS = [
       "AI-powered TTRPG campaign manager that organizes your session notes.",
     tags: ["TanStack Start", "Convex", "AI SDK", "TypeScript"],
     icon: "/images/logos/tro.gg.webp",
+    status: "private-beta" as const,
   },
   {
     name: "tarrasque.io",
@@ -257,6 +259,7 @@ export const PROJECTS = [
       "Virtual tabletop platform for D&D. Grew to 9,000+ users before acquisition.",
     tags: ["Next.js", "NestJS", "WebGL", "WebSockets", "TypeScript"],
     icon: "/images/logos/tarrasque.io.webp",
+    status: "acquired" as const,
   },
 ];
 
