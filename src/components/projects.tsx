@@ -1,5 +1,19 @@
-import { ArrowSquareOutIcon } from "@phosphor-icons/react/dist/ssr";
 import { PROJECTS } from "~/lib/data";
+
+const STATUS_CONFIG = {
+  "open-source": {
+    label: "Open Source",
+    className: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+  },
+  "private-beta": {
+    label: "Private Beta",
+    className: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  },
+  acquired: {
+    label: "Acquired",
+    className: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  },
+} as const;
 
 export function Projects() {
   return (
@@ -12,7 +26,7 @@ export function Projects() {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <div className="flex items-start justify-between">
+          <div className="flex flex-wrap items-start justify-between gap-2">
             <div className="flex items-center gap-3">
               {project.icon && (
                 <img
@@ -27,7 +41,13 @@ export function Projects() {
                 {project.name}
               </h3>
             </div>
-            <ArrowSquareOutIcon className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-zinc-300" />
+            {project.status && (
+              <span
+                className={`lg:-right-2 lg:-top-2 rounded-md border px-2 py-1 font-medium text-xs lg:absolute ${STATUS_CONFIG[project.status].className}`}
+              >
+                {STATUS_CONFIG[project.status].label}
+              </span>
+            )}
           </div>
 
           <p className="flex-1 text-sm text-zinc-400 leading-relaxed">

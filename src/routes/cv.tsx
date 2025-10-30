@@ -13,7 +13,7 @@ export const Route = createFileRoute("/cv")({
   component: CV,
 });
 
-const MAX_EXPERIENCE_ITEMS_PRINT = 6;
+const MAX_EXPERIENCE_ITEMS_PRINT = 9;
 
 function CV() {
   return (
@@ -77,7 +77,7 @@ function CV() {
       </header>
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 print:grid-cols-3 print:gap-4">
-        {/* Left Column - Experience */}
+        {/* Main Content - Experience & Education */}
         <div className="lg:col-span-2 print:col-span-2">
           {/* Experience */}
           <section className="mb-16 pb-4 print:mb-2">
@@ -142,53 +142,6 @@ function CV() {
             </div>
           </section>
 
-          {/* Projects */}
-          <section className="mb-16 print:mb-6">
-            <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
-              Personal Projects
-            </h2>
-            <div className="space-y-6 print:space-y-3">
-              {PROJECTS.map((project) => (
-                <div className="space-y-2 print:space-y-1" key={project.name}>
-                  <div className="flex items-center gap-2">
-                    {project.icon && (
-                      <img
-                        alt={project.name}
-                        className="h-5 w-5 rounded print:h-4 print:w-4"
-                        height={20}
-                        src={project.icon}
-                        width={20}
-                      />
-                    )}
-                    <h3 className="font-bold text-lg text-zinc-100 print:text-base">
-                      <a
-                        className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
-                        href={project.url}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        {project.name}
-                      </a>
-                    </h3>
-                  </div>
-                  <p className="text-zinc-300 leading-relaxed print:text-sm">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 print:hidden">
-                    {project.tags.map((tag) => (
-                      <span
-                        className="rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-400"
-                        key={tag}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* Education */}
           <section className="mb-16 print:mb-6">
             <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
@@ -221,7 +174,7 @@ function CV() {
           </section>
         </div>
 
-        {/* Right Column - Skills & Languages */}
+        {/* Right Column - Skills, Projects & Languages */}
         <div className="space-y-12 print:space-y-6">
           {/* Skills */}
           <section className="pb-4">
@@ -244,6 +197,53 @@ function CV() {
                         key={item}
                       >
                         {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Projects */}
+          <section>
+            <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
+              Personal Projects
+            </h2>
+            <div className="space-y-6 print:space-y-2">
+              {PROJECTS.map((project) => (
+                <div className="space-y-2 print:space-y-0" key={project.name}>
+                  <div className="flex items-center gap-2">
+                    {project.icon && (
+                      <img
+                        alt={project.name}
+                        className="h-5 w-5 rounded print:h-4 print:w-4"
+                        height={20}
+                        src={project.icon}
+                        width={20}
+                      />
+                    )}
+                    <h3 className="font-bold text-lg text-zinc-100 print:text-base">
+                      <a
+                        className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
+                        href={project.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {project.name}
+                      </a>
+                    </h3>
+                  </div>
+                  <p className="text-zinc-300 leading-relaxed print:text-sm">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 print:hidden">
+                    {project.tags.map((tag) => (
+                      <span
+                        className="rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-400"
+                        key={tag}
+                      >
+                        {tag}
                       </span>
                     ))}
                   </div>
