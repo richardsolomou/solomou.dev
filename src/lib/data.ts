@@ -321,3 +321,5 @@ export const SKILLS = {
   "Monitoring & Analytics": ["PostHog", "Sentry", "Grafana", "Prometheus"],
   Other: ["DDD", "SOA", "TDD", "OOP", "Agile (Scrum, Kanban)"],
 };
+
+export const LANGUAGES = ["English", "Greek"];

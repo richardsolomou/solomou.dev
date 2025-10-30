@@ -8,9 +8,9 @@ export function Links() {
       {LINKS.map((social) => (
         <Button
           asChild
-          className="font-medium text-muted-foreground transition-all duration-200 hover:text-foreground"
+          className="text-muted-foreground transition-all duration-200 hover:text-foreground"
           key={social.href}
-          variant="ghost"
+          variant="outline"
         >
           <Link
             rel="noopener noreferrer"
