@@ -21,7 +21,7 @@ function CV() {
       <nav className="sticky top-0 z-10 border-zinc-800 border-b bg-zinc-950/80 backdrop-blur-sm print:hidden">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-8 sm:py-4">
           <Button asChild size="sm" variant="outline">
-            <Link to="/">
+            <Link data-umami-event="cv_back_clicked" to="/">
               <span className="flex items-center gap-1.5 sm:gap-2">
                 <ArrowLeftIcon className="h-4 w-4" />
                 <span className="hidden sm:inline">Back</span>
@@ -29,7 +29,12 @@ function CV() {
             </Link>
           </Button>
 
-          <Button onClick={() => window.print()} size="sm" variant="outline">
+          <Button
+            data-umami-event="cv_download_clicked"
+            onClick={() => window.print()}
+            size="sm"
+            variant="outline"
+          >
             <span className="flex items-center gap-1.5 sm:gap-2">
               <DownloadIcon className="h-4 w-4" />
               <span className="hidden sm:inline">Download PDF</span>
@@ -60,6 +65,7 @@ function CV() {
               <div className="flex flex-wrap items-center gap-2 sm:gap-4">
                 <a
                   className="flex items-center gap-2 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300"
+                  data-umami-event="cv_email_clicked"
                   href="mailto:richard@solomou.dev"
                 >
                   <EnvelopeIcon className="h-4 w-4" />
@@ -69,6 +75,7 @@ function CV() {
 
                 <a
                   className="flex items-center gap-2 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300"
+                  data-umami-event="cv_website_clicked"
                   href="https://solomou.dev"
                 >
                   <GlobeIcon className="h-4 w-4" />
@@ -101,6 +108,9 @@ function CV() {
                       <p className="mb-1 text-lg text-zinc-200 print:mb-0 print:text-sm">
                         <a
                           className="inline-flex items-center gap-1 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
+                          data-umami-event="cv_company_clicked"
+                          data-umami-event-company={exp.company}
+                          data-umami-event-url={exp.companyUrl}
                           href={exp.companyUrl}
                           rel="noopener noreferrer"
                           target="_blank"
@@ -226,6 +236,9 @@ function CV() {
                       <h3 className="font-bold text-lg text-zinc-100 print:text-base">
                         <a
                           className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
+                          data-umami-event="cv_project_clicked"
+                          data-umami-event-project={project.name}
+                          data-umami-event-url={project.url}
                           href={project.url}
                           rel="noopener noreferrer"
                           target="_blank"

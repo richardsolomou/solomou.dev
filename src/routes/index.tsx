@@ -32,6 +32,9 @@ function Home() {
               I'm a Full-Stack Engineer and Technical Lead at{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
+                data-umami-event="company_link_clicked"
+                data-umami-event-company="Keenious"
+                data-umami-event-url="https://keenious.com"
                 href="https://keenious.com"
                 rel="noopener"
                 target="_blank"
@@ -48,6 +51,9 @@ function Home() {
               and former Founder of{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
+                data-umami-event="company_link_clicked"
+                data-umami-event-company="Tarrasque.io"
+                data-umami-event-url="https://tarrasque.io"
                 href="https://tarrasque.io"
                 rel="noopener"
                 target="_blank"

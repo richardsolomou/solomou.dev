@@ -13,6 +13,8 @@ export function Links() {
           variant="outline"
         >
           <Link
+            data-umami-event={`${social.name.toLowerCase()}_link_clicked`}
+            data-umami-event-url={social.href}
             rel="noopener noreferrer"
             target={social.newTab ? "_blank" : "_self"}
             title={social.name}
