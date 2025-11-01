@@ -21,6 +21,9 @@ export function Projects() {
       {PROJECTS.map((project) => (
         <a
           className="group relative flex flex-col space-y-3 rounded-lg border border-zinc-800/50 bg-zinc-900/30 p-4 transition-all hover:border-zinc-700/50 hover:bg-zinc-900/50"
+          data-umami-event="project_link_clicked"
+          data-umami-event-project={project.name}
+          data-umami-event-url={project.url}
           href={project.url}
           key={project.name}
           rel="noopener noreferrer"
