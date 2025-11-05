@@ -1,3 +1,4 @@
+import { cn } from "@ras-sh/ui/utils";
 import { STACK } from "~/lib/data";
 
 export function TechStack() {
@@ -27,7 +28,10 @@ export function TechStack() {
             <div className="flex flex-wrap gap-2">
               {allTech.map((item, index) => (
                 <span
-                  className={`rounded-md px-2 py-1 text-xs transition-colors ${getItemStyle(index, allTech.length)}`}
+                  className={cn(
+                    "rounded-md px-2 py-1 text-xs transition-colors",
+                    getItemStyle(index, allTech.length)
+                  )}
                   key={item}
                 >
                   {item}

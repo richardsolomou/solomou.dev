@@ -21,7 +21,7 @@ export function Links() {
             to={social.href}
           >
             <span className="flex items-center gap-2">
-              <social.icon className="size-5 text-indigo-400" />
+              <social.icon className="size-5 text-indigo-400/80" />
               {social.name}
             </span>
           </Link>

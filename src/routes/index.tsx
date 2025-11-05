@@ -89,19 +89,23 @@ function Home() {
           </h2>
           <div className="space-y-6 text-zinc-300 leading-relaxed">
             <p>
-              I build web applications using TypeScript, React, and Node.js. I
-              work across the full stack, from database design to user
-              interfaces.
+              I build full-stack web applications with TypeScript, React, and
+              Node.js. As a Technical Lead, I get to guide teams through complex
+              technical problems while still keeping my hands dirty with code.
             </p>
             <p>
-              As a Technical Lead, I mentor developers, make architectural
-              decisions, and help establish development practices that make
-              teams more effective.
+              Outside of work, I'm all about building tools that scratch my own
+              itch. I've created open-source apps, packages, and templates for
+              the web dev community. One project grew to 10,000+ users before
+              being acquired. These days, I'm building AI-powered tools for
+              tabletop RPG campaigns - turns out you can combine D&D night with
+              your day job skills.
             </p>
             <p>
-              I enjoy solving complex problems and debugging tricky issues.
-              Whether it's optimizing performance or designing scalable systems,
-              I like digging into challenges until I understand them completely.
+              The best part? Seeing something go from an idea in my head to a
+              tool that thousands of people use every day. That feedback loop -
+              building, shipping, and seeing real impact - that's what keeps me
+              up at night coding.
             </p>
           </div>
         </section>
