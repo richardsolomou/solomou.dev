@@ -5,6 +5,7 @@ import {
   GlobeIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@ras-sh/ui/button";
+import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
 
@@ -97,7 +98,10 @@ function CV() {
               <div className="space-y-10 print:space-y-3">
                 {EXPERIENCE.map((exp, index) => (
                   <div
-                    className={`relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0 ${index >= MAX_EXPERIENCE_ITEMS_PRINT ? "print:hidden" : ""}`}
+                    className={cn(
+                      "relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0",
+                      index >= MAX_EXPERIENCE_ITEMS_PRINT && "print:hidden"
+                    )}
                     key={exp.id}
                   >
                     <div className="-left-2.5 -top-1 absolute hidden h-4 w-4 rounded-full border-2 border-zinc-800 bg-zinc-600 sm:block print:hidden" />

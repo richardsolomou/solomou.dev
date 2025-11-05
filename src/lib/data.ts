@@ -134,7 +134,7 @@ export const EXPERIENCE = [
     location: "Nicosia, Cyprus",
     period: "July 2020 - January 2025",
     description: [
-      "Founded and grew B2C SaaS from 0 to 9,000+ users across 20+ countries, leading to acquisition.",
+      "Founded and grew B2C SaaS from 0 to 10,000+ users across 20+ countries, leading to acquisition.",
       "Built real-time collaborative features using Next.js, NestJS, TypeScript, WebGL, and WebSocket/GraphQL.",
       "Handled all engineering, CI/CD, community management, marketing, and UX research.",
     ],
@@ -241,7 +241,6 @@ export const PROJECTS = [
       "My corner of the internet where I build open-source tools and experiments.",
     tags: ["TypeScript", "React", "Node.js", "Open Source"],
     icon: "/images/logos/ras.sh.webp",
-    status: "open-source" as const,
   },
   {
     name: "tro.gg",
@@ -250,16 +249,16 @@ export const PROJECTS = [
       "AI-powered TTRPG campaign manager that organizes your session notes.",
     tags: ["TanStack Start", "Convex", "AI SDK", "TypeScript"],
     icon: "/images/logos/tro.gg.webp",
-    status: "private-beta" as const,
+    label: "Open Beta",
   },
   {
     name: "tarrasque.io",
     url: "https://tarrasque.io",
     description:
-      "Virtual tabletop platform for D&D. Grew to 9,000+ users before acquisition.",
-    tags: ["Next.js", "NestJS", "WebGL", "WebSockets", "TypeScript"],
+      "Virtual tabletop platform for D&D. Grew to 10,000+ users before acquisition.",
+    tags: ["Next.js", "NestJS", "WebSockets", "TypeScript"],
     icon: "/images/logos/tarrasque.io.webp",
-    status: "acquired" as const,
+    label: "Acquired",
   },
 ];
 
