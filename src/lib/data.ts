@@ -1,36 +1,33 @@
-import {
-  CalendarDotIcon,
-  EnvelopeIcon,
-  GithubLogoIcon,
-  LinkedinLogoIcon,
-  ReadCvLogoIcon,
-} from "@phosphor-icons/react/ssr";
-
 export const LINKS = [
-  { name: "CV", href: "/cv", newTab: false, icon: ReadCvLogoIcon },
+  {
+    name: "CV",
+    href: "/cv",
+    newTab: false,
+    icon: "/images/social/google-docs.svg",
+  },
   {
     name: "GitHub",
     href: "https://github.com/richardsolomou",
     newTab: true,
-    icon: GithubLogoIcon,
+    icon: "/images/social/github.svg",
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/richardsolomou",
     newTab: true,
-    icon: LinkedinLogoIcon,
+    icon: "/images/social/linkedin.svg",
   },
   {
     name: "Email",
     href: "mailto:richard@solomou.dev",
     newTab: false,
-    icon: EnvelopeIcon,
+    icon: "/images/social/gmail.svg",
   },
   {
     name: "Schedule",
     href: "https://cal.com/richardsolomou/30min",
     newTab: true,
-    icon: CalendarDotIcon,
+    icon: "/images/social/google-calendar.svg",
   },
 ];
 
