@@ -5,6 +5,7 @@ import {
   GlobeIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@ras-sh/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@ras-sh/ui/tooltip";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
@@ -18,30 +19,42 @@ const MAX_EXPERIENCE_ITEMS_PRINT = 9;
 function CV() {
   return (
     <>
-      {/* Sticky Navigation */}
-      <nav className="sticky top-0 z-10 border-zinc-800 border-b bg-zinc-950/80 backdrop-blur-sm print:hidden">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:gap-4 sm:px-8 sm:py-4">
-          <Button asChild size="sm" variant="outline">
-            <Link data-umami-event="cv_back_clicked" to="/">
-              <span className="flex items-center gap-1.5 sm:gap-2">
+      {/* Floating Navigation */}
+      <nav className="fixed top-4 left-4 z-10 flex items-center gap-2 print:hidden">
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              asChild
+              className="backdrop-blur-sm"
+              size="icon-sm"
+              variant="outline"
+            >
+              <Link data-umami-event="cv_back_clicked" to="/">
                 <ArrowLeftIcon className="h-4 w-4" />
-                <span className="hidden sm:inline">Back</span>
-              </span>
-            </Link>
-          </Button>
+              </Link>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Back to home</p>
+          </TooltipContent>
+        </Tooltip>
 
-          <Button
-            data-umami-event="cv_download_clicked"
-            onClick={() => window.print()}
-            size="sm"
-            variant="outline"
-          >
-            <span className="flex items-center gap-1.5 sm:gap-2">
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              className="backdrop-blur-sm"
+              data-umami-event="cv_download_clicked"
+              onClick={() => window.print()}
+              size="icon-sm"
+              variant="outline"
+            >
               <DownloadIcon className="h-4 w-4" />
-              <span className="hidden sm:inline">Download PDF</span>
-            </span>
-          </Button>
-        </div>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Download PDF</p>
+          </TooltipContent>
+        </Tooltip>
       </nav>
 
       <div className="mx-auto max-w-7xl px-8 py-12 md:py-20 print:max-w-none print:p-4 print:py-0">
