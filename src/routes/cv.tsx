@@ -5,7 +5,6 @@ import {
   GlobeIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@ras-sh/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@ras-sh/ui/tooltip";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
@@ -21,40 +20,27 @@ function CV() {
     <>
       {/* Floating Navigation */}
       <nav className="fixed top-4 left-4 z-10 flex items-center gap-2 print:hidden">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              asChild
-              className="backdrop-blur-sm"
-              size="icon-sm"
-              variant="outline"
-            >
-              <Link data-umami-event="cv_back_clicked" to="/">
-                <ArrowLeftIcon className="h-4 w-4" />
-              </Link>
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Back to home</p>
-          </TooltipContent>
-        </Tooltip>
+        <Button
+          asChild
+          className="backdrop-blur-sm"
+          size="icon-sm"
+          variant="outline"
+        >
+          <Link data-umami-event="cv_back_clicked" title="Back to home" to="/">
+            <ArrowLeftIcon className="h-4 w-4" />
+          </Link>
+        </Button>
 
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              className="backdrop-blur-sm"
-              data-umami-event="cv_download_clicked"
-              onClick={() => window.print()}
-              size="icon-sm"
-              variant="outline"
-            >
-              <DownloadIcon className="h-4 w-4" />
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>Download PDF</p>
-          </TooltipContent>
-        </Tooltip>
+        <Button
+          className="backdrop-blur-sm"
+          data-umami-event="cv_download_clicked"
+          onClick={() => window.print()}
+          size="icon-sm"
+          title="Download PDF"
+          variant="outline"
+        >
+          <DownloadIcon className="h-4 w-4" />
+        </Button>
       </nav>
 
       <div className="mx-auto max-w-7xl px-8 py-12 md:py-20 print:max-w-none print:p-4 print:py-0">
