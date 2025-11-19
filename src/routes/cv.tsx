@@ -1,12 +1,7 @@
-import {
-  ArrowLeftIcon,
-  DownloadIcon,
-  EnvelopeIcon,
-  GlobeIcon,
-} from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@ras-sh/ui/button";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowLeftIcon, DownloadIcon, GlobeIcon, MailIcon } from "lucide-react";
 import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
 
 export const Route = createFileRoute("/cv")({
@@ -27,7 +22,7 @@ function CV() {
           variant="outline"
         >
           <Link data-umami-event="cv_back_clicked" title="Back to home" to="/">
-            <ArrowLeftIcon className="h-4 w-4" />
+            <ArrowLeftIcon className="size-4" />
           </Link>
         </Button>
 
@@ -39,7 +34,7 @@ function CV() {
           title="Download PDF"
           variant="outline"
         >
-          <DownloadIcon className="h-4 w-4" />
+          <DownloadIcon className="size-4" />
         </Button>
       </nav>
 
@@ -48,7 +43,7 @@ function CV() {
         <header className="mb-10 flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left print:mb-6 print:gap-4">
           <img
             alt="Richard Solomou"
-            className="shrink-0 rounded-full print:h-25 print:w-25"
+            className="shrink-0 rounded-full print:size-25"
             height={128}
             src="/images/richard-face.png"
             width={128}
@@ -68,9 +63,10 @@ function CV() {
                   data-umami-event="cv_email_clicked"
                   href="mailto:richard@solomou.dev"
                 >
-                  <EnvelopeIcon className="h-4 w-4" />
+                  <MailIcon className="size-4" />
                   richard@solomou.dev
                 </a>
+
                 <span className="hidden text-zinc-600 sm:block">•</span>
 
                 <a
@@ -78,7 +74,7 @@ function CV() {
                   data-umami-event="cv_website_clicked"
                   href="https://solomou.dev"
                 >
-                  <GlobeIcon className="h-4 w-4" />
+                  <GlobeIcon className="size-4" />
                   solomou.dev
                 </a>
               </div>
@@ -103,7 +99,7 @@ function CV() {
                     )}
                     key={exp.id}
                   >
-                    <div className="-left-2.5 -top-1 absolute hidden h-4 w-4 rounded-full border-2 border-zinc-800 bg-zinc-600 sm:block print:hidden" />
+                    <div className="-left-2.5 -top-1 absolute hidden size-4 rounded-full border-2 border-zinc-800 bg-zinc-600 sm:block print:hidden" />
                     <div className="mb-4 print:mb-2">
                       <h3 className="mb-1 font-bold text-xl text-zinc-100 print:mb-0 print:text-base">
                         {exp.title}
@@ -146,7 +142,7 @@ function CV() {
                     <ul className="space-y-3 text-zinc-300 leading-relaxed print:space-y-1 print:text-sm">
                       {exp.description.map((item) => (
                         <li className="flex" key={item}>
-                          <span className="mt-2 mr-3 text-xs text-zinc-500 print:mt-1">
+                          <span className="mt-1.5 mr-3 text-xs text-zinc-500 print:mt-1">
                             ▸
                           </span>
                           <span className="flex-1">{item}</span>
@@ -164,7 +160,7 @@ function CV() {
                 Education
               </h2>
               <div className="relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0">
-                <div className="-left-2.5 -top-1 absolute hidden h-4 w-4 rounded-full border-zinc-800 bg-zinc-600 sm:block sm:border-2 print:hidden" />
+                <div className="-left-2.5 -top-1 absolute hidden size-4 rounded-full border-zinc-800 bg-zinc-600 sm:block sm:border-2 print:hidden" />
                 <div className="mb-4 print:mb-2">
                   <h3 className="mb-1 font-bold text-xl text-zinc-100 print:mb-0 print:text-base">
                     {EDUCATION.degree}
@@ -179,7 +175,7 @@ function CV() {
                 <ul className="space-y-3 text-zinc-300 leading-relaxed print:space-y-1 print:text-sm">
                   {EDUCATION.achievements.map((achievement) => (
                     <li className="flex" key={achievement}>
-                      <span className="mt-2 mr-3 text-xs text-zinc-500 print:mt-1">
+                      <span className="mt-1.5 mr-3 text-xs text-zinc-500 print:mt-1">
                         ▸
                       </span>
                       <span className="flex-1">{achievement}</span>
@@ -230,7 +226,7 @@ function CV() {
                       {project.icon && (
                         <img
                           alt={project.name}
-                          className="h-5 w-5 rounded print:h-4 print:w-4"
+                          className="size-5 rounded print:size-4"
                           height={20}
                           src={project.icon}
                           width={20}
