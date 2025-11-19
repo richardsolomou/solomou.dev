@@ -67,7 +67,7 @@ function Home() {
                 />
                 Keenious
               </a>
-              , and Founder of{" "}
+              , and former Founder of{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
                 data-umami-event="company_link_clicked"
@@ -85,8 +85,8 @@ function Home() {
                   width={12}
                 />
                 Tarrasque.io
-              </a>{" "}
-              (acquired).
+              </a>
+              .
             </p>
             <p>
               I've been building websites since I was 8 years old. When I'm not

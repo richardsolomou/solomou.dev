@@ -100,9 +100,7 @@ export const EXPERIENCE = [
     companyIconPrint: "/images/logos/posthog.svg",
     location: "Remote",
     period: "January 2026 - Present",
-    description: [
-      "TBD",
-    ],
+    description: ["TBD"],
   },
   {
     id: "technical-lead-keenious",
