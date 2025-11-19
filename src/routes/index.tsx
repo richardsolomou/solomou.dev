@@ -29,7 +29,26 @@ function Home() {
 
           <div className="space-y-6 text-lg text-zinc-300 leading-relaxed">
             <p>
-              I'm a Full-Stack Engineer and Technical Lead at{" "}
+              I'm a Product Engineer at{" "}
+              <a
+                className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
+                data-umami-event="company_link_clicked"
+                data-umami-event-company="PostHog"
+                data-umami-event-url="https://posthog.com"
+                href="https://posthog.com"
+                rel="noopener"
+                target="_blank"
+              >
+                <img
+                  alt="PostHog"
+                  className="inline h-3 w-auto"
+                  height={12}
+                  src="/images/logos/posthog-white.svg"
+                  width={12}
+                />
+                PostHog
+              </a>
+              , former Technical Lead at{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
                 data-umami-event="company_link_clicked"
@@ -47,8 +66,8 @@ function Home() {
                   width={12}
                 />
                 Keenious
-              </a>{" "}
-              and former Founder of{" "}
+              </a>
+              , and Founder of{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
                 data-umami-event="company_link_clicked"
@@ -70,9 +89,9 @@ function Home() {
               (acquired).
             </p>
             <p>
-              I've been building websites since I was 8 years old. These days,
-              when I'm not coding, I'm being a dad 👶, walking my husky 🐶,
-              hanging out with my cat 🐈‍⬛, or drinking coffee ☕️.
+              I've been building websites since I was 8 years old. When I'm not
+              coding, I'm being a dad 👶, walking my husky 🐶, hanging out with
+              my cat 🐈‍⬛, or drinking coffee ☕️.
             </p>
           </div>
         </section>
@@ -80,6 +99,14 @@ function Home() {
         {/* Links */}
         <section>
           <Links />
+        </section>
+
+        {/* Projects */}
+        <section>
+          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
+            Personal Projects
+          </h2>
+          <Projects />
         </section>
 
         {/* About */}
@@ -95,27 +122,18 @@ function Home() {
             </p>
             <p>
               Outside of work, I'm all about building tools that scratch my own
-              itch. I've created open-source apps, packages, and templates for
-              the web dev community. One project grew to 10,000+ users before
-              being acquired. These days, I'm building AI-powered tools for
-              tabletop RPG campaigns - turns out you can combine D&D night with
-              your day job skills.
+              itch. I create open-source apps, packages, and templates for the
+              web dev and gaming community. My current side-gig is an AI-powered
+              TTRPG campaign manager - turns out you <em>can</em> combine D&D
+              night with your day job skills.
             </p>
             <p>
-              The best part? Seeing something go from an idea in my head to a
-              tool that thousands of people use every day. That feedback loop -
-              building, shipping, and seeing real impact - that's what keeps me
-              up at night coding.
+              I love seeing something go from an idea in my head to a tool that
+              thousands of people use every day. That feedback loop - building,
+              shipping, and seeing real impact - that's what keeps me up at
+              night coding.
             </p>
           </div>
-        </section>
-
-        {/* Projects */}
-        <section>
-          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
-            Personal Projects
-          </h2>
-          <Projects />
         </section>
 
         {/* Tech Stack */}

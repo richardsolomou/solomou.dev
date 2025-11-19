@@ -5,14 +5,14 @@ export function TechStack() {
   const getItemStyle = (index: number, total: number) => {
     // Top 30% - favorites (strongest color)
     if (index < Math.ceil(total * 0.3)) {
-      return "bg-indigo-400/20 text-zinc-200 border border-indigo-400/30";
+      return "bg-zinc-600/40 text-zinc-100 border-zinc-600";
     }
     // Next 30% - like (medium color)
     if (index < Math.ceil(total * 0.6)) {
-      return "bg-zinc-700/50 text-zinc-300 border border-zinc-700/30";
+      return "bg-zinc-700/40 text-zinc-300 border-zinc-800";
     }
     // Rest - familiar with (subtle)
-    return "bg-zinc-800/30 text-zinc-400 border border-zinc-800/30";
+    return "bg-zinc-900/40 text-zinc-500 border-zinc-900";
   };
 
   return (
@@ -29,7 +29,7 @@ export function TechStack() {
               {allTech.map((item, index) => (
                 <span
                   className={cn(
-                    "rounded-md px-2 py-1 text-xs transition-colors",
+                    "rounded-md border px-2 py-1 text-xs transition-colors",
                     getItemStyle(index, allTech.length)
                   )}
                   key={item}

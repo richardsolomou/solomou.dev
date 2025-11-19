@@ -92,6 +92,19 @@ export const STACK = {
 
 export const EXPERIENCE = [
   {
+    id: "product-engineer-posthog",
+    title: "Product Engineer",
+    company: "PostHog",
+    companyUrl: "https://posthog.com",
+    companyIcon: "/images/logos/posthog-white.svg",
+    companyIconPrint: "/images/logos/posthog.svg",
+    location: "Remote",
+    period: "January 2026 - Present",
+    description: [
+      "TBD",
+    ],
+  },
+  {
     id: "technical-lead-keenious",
     title: "Technical Lead",
     company: "Keenious",
@@ -99,7 +112,7 @@ export const EXPERIENCE = [
     companyIcon: "/images/logos/keenious.webp",
     companyIconPrint: "/images/logos/keenious.webp",
     location: "Tromsø, Norway (Remote)",
-    period: "January 2023 - Present",
+    period: "January 2023 - January 2026",
     description: [
       "Built features using Next.js, NestJS, TypeScript, and PostgreSQL for EdTech platform serving 50+ institutions.",
       "Managed Kubernetes infrastructure on AWS and Azure, reducing deployment time by 90% with Docker for local development.",
