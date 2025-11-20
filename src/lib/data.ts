@@ -59,15 +59,7 @@ export const STACK = {
       "Convex",
       "Better Auth",
     ],
-    hidden: [
-      "tRPC",
-      "Prisma",
-      "NestJS",
-      "Redis",
-      "Socket.io",
-      "WebSockets",
-      "REST APIs",
-    ],
+    hidden: ["tRPC", "Prisma", "NestJS", "Redis", "Socket.io", "GraphQL"],
   },
   "Dev Tools": {
     visible: [
@@ -141,6 +133,7 @@ export const EXPERIENCE = [
     title: "Front End Software Engineer",
     company: "Proto.io & Overflow.io",
     companyUrl: "https://proto.io",
+    companyIcon: "/images/logos/overflow.svg",
     location: "Nicosia, Cyprus",
     period: "August 2018 - January 2021",
     description: [
@@ -154,6 +147,7 @@ export const EXPERIENCE = [
     title: "Senior Front End Developer",
     company: "Alliants",
     companyUrl: "https://alliants.com",
+    companyIcon: "/images/logos/alliants.svg",
     location: "Southampton, United Kingdom",
     period: "March 2018 - June 2018",
     description: [
@@ -165,6 +159,7 @@ export const EXPERIENCE = [
     title: "Senior Front End Developer",
     company: "Efficio Digital",
     companyUrl: "https://efficio.digital",
+    companyIcon: "/images/logos/efficio.svg",
     location: "Southampton, United Kingdom",
     period: "June 2016 - March 2018",
     description: [
@@ -177,6 +172,7 @@ export const EXPERIENCE = [
     title: "UI/UX Developer",
     company: "Feefo",
     companyUrl: "https://feefo.com",
+    companyIcon: "/images/logos/feefo.svg",
     location: "Petersfield, United Kingdom",
     period: "April 2015 - June 2016",
     description: [
@@ -253,7 +249,7 @@ export const PROJECTS = [
     url: "https://tarrasque.io",
     description:
       "Virtual tabletop platform for D&D. Grew to 10,000+ users before acquisition.",
-    tags: ["Next.js", "NestJS", "WebSockets", "TypeScript"],
+    tags: ["Next.js", "NestJS", "GraphQL", "TypeScript"],
     icon: "/images/logos/tarrasque.io.webp",
     label: "Acquired",
   },
@@ -288,8 +284,7 @@ export const SKILLS = {
     "FastAPI",
     "Redis",
     "Socket.io",
-    "WebSockets",
-    "REST APIs",
+    "GraphQL",
   ],
   "Dev Tools": [
     "VS Code",
