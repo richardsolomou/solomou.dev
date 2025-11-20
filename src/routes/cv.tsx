@@ -91,7 +91,7 @@ function CV() {
               <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
                 Experience
               </h2>
-              <div className="space-y-10 print:space-y-3">
+              <div className="space-y-10 print:space-y-5">
                 {EXPERIENCE.map((exp, index) => (
                   <div
                     className={cn(
