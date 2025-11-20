@@ -29,26 +29,7 @@ function Home() {
 
           <div className="space-y-6 text-lg text-zinc-300 leading-relaxed">
             <p>
-              I'm a Product Engineer at{" "}
-              <a
-                className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
-                data-umami-event="company_link_clicked"
-                data-umami-event-company="PostHog"
-                data-umami-event-url="https://posthog.com"
-                href="https://posthog.com"
-                rel="noopener"
-                target="_blank"
-              >
-                <img
-                  alt="PostHog"
-                  className="inline h-3 w-auto"
-                  height={12}
-                  src="/images/logos/posthog-white.svg"
-                  width={12}
-                />
-                PostHog
-              </a>
-              , former Technical Lead at{" "}
+              I'm a Full-Stack Engineer and Technical Lead at{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
                 data-umami-event="company_link_clicked"
@@ -66,8 +47,8 @@ function Home() {
                   width={12}
                 />
                 Keenious
-              </a>
-              , and former Founder of{" "}
+              </a>{" "}
+              and former Founder of{" "}
               <a
                 className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
                 data-umami-event="company_link_clicked"
