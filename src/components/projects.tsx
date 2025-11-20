@@ -1,5 +1,6 @@
 import { cn } from "@ras-sh/ui/utils";
 import { PROJECTS } from "~/lib/data";
+import { iconMap } from "~/lib/icons";
 
 const getLabelStyle = (label: string) => {
   switch (label) {
@@ -58,14 +59,18 @@ export function Projects() {
           </p>
 
           <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span
-                className="rounded-md bg-zinc-800 px-2 py-1 text-xs text-zinc-400"
-                key={tag}
-              >
-                {tag}
-              </span>
-            ))}
+            {project.tags.map((tag) => {
+              const Icon = iconMap[tag];
+              return (
+                <span
+                  className="flex items-center gap-1.5 rounded-md bg-zinc-800 px-2 py-1 text-xs text-zinc-400"
+                  key={tag}
+                >
+                  {Icon && <Icon className="size-3" />}
+                  {tag}
+                </span>
+              );
+            })}
           </div>
         </a>
       ))}

@@ -3,12 +3,13 @@ import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeftIcon, DownloadIcon, GlobeIcon, MailIcon } from "lucide-react";
 import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
+import { iconMap } from "~/lib/icons";
 
 export const Route = createFileRoute("/cv")({
   component: CV,
 });
 
-const MAX_EXPERIENCE_ITEMS_PRINT = 9;
+const MAX_EXPERIENCE_ITEMS_PRINT = 8;
 
 function CV() {
   return (
@@ -132,7 +133,7 @@ function CV() {
                               />
                             </>
                           )}
-                          {exp.company}
+                          <span className="ml-0.5">{exp.company}</span>
                         </a>
                       </p>
                       <p className="font-medium text-sm text-zinc-400 uppercase tracking-wider print:text-xs">
@@ -200,14 +201,18 @@ function CV() {
                       {category}
                     </h3>
                     <div className="flex flex-wrap gap-2 print:gap-1">
-                      {items.map((item) => (
-                        <span
-                          className="rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-300 print:border print:border-zinc-300 print:bg-transparent print:px-1.5 print:py-0.5 print:text-2xs"
-                          key={item}
-                        >
-                          {item}
-                        </span>
-                      ))}
+                      {items.map((item) => {
+                        const Icon = iconMap[item];
+                        return (
+                          <span
+                            className="flex items-center gap-1.5 rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-300 print:border print:border-zinc-300 print:bg-transparent print:px-1.5 print:py-0.5 print:text-2xs"
+                            key={item}
+                          >
+                            {Icon && <Icon className="size-3 print:hidden" />}
+                            {item}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
@@ -250,14 +255,18 @@ function CV() {
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2 print:gap-1">
-                      {project.tags.map((tag) => (
-                        <span
-                          className="rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-300 print:border print:border-zinc-300 print:bg-transparent print:px-1.5 print:py-0.5 print:text-2xs"
-                          key={tag}
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                      {project.tags.map((tag) => {
+                        const Icon = iconMap[tag];
+                        return (
+                          <span
+                            className="flex items-center gap-1.5 rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-300 print:border print:border-zinc-300 print:bg-transparent print:px-1.5 print:py-0.5 print:text-2xs"
+                            key={tag}
+                          >
+                            {Icon && <Icon className="size-3 print:hidden" />}
+                            {tag}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
