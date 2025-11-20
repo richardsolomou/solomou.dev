@@ -1,3 +1,4 @@
+import { Badge } from "@ras-sh/ui/badge";
 import { Button } from "@ras-sh/ui/button";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -141,7 +142,7 @@ function CV() {
                       </p>
                     </div>
                     <ul className="space-y-3 text-zinc-300 leading-relaxed print:space-y-1 print:text-sm">
-                      {exp.description.map((item) => (
+                      {exp.description?.map((item) => (
                         <li className="flex" key={item}>
                           <span className="mt-1.5 mr-3 text-xs text-zinc-500 print:mt-1">
                             ▸
@@ -196,7 +197,7 @@ function CV() {
               </h2>
               <div className="space-y-6 print:space-y-4">
                 {Object.entries(SKILLS).map(([category, items]) => (
-                  <div className="space-y-3" key={category}>
+                  <div className="space-y-2.5" key={category}>
                     <h3 className="font-semibold text-sm text-zinc-100 uppercase tracking-wider print:text-xs">
                       {category}
                     </h3>
@@ -204,13 +205,14 @@ function CV() {
                       {items.map((item) => {
                         const Icon = iconMap[item];
                         return (
-                          <span
-                            className="flex items-center gap-1.5 rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-300 print:border print:border-zinc-300 print:bg-transparent print:px-1.5 print:py-0.5 print:text-2xs"
+                          <Badge
+                            className="gap-1.5 font-normal print:border-zinc-300"
                             key={item}
+                            variant="secondary"
                           >
                             {Icon && <Icon className="size-3 print:hidden" />}
-                            {item}
-                          </span>
+                            <span>{item}</span>
+                          </Badge>
                         );
                       })}
                     </div>
@@ -258,13 +260,14 @@ function CV() {
                       {project.tags.map((tag) => {
                         const Icon = iconMap[tag];
                         return (
-                          <span
-                            className="flex items-center gap-1.5 rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-300 print:border print:border-zinc-300 print:bg-transparent print:px-1.5 print:py-0.5 print:text-2xs"
+                          <Badge
+                            className="gap-1.5 font-normal print:border-zinc-300"
                             key={tag}
+                            variant="secondary"
                           >
                             {Icon && <Icon className="size-3 print:hidden" />}
-                            {tag}
-                          </span>
+                            <span>{tag}</span>
+                          </Badge>
                         );
                       })}
                     </div>

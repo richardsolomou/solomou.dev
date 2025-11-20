@@ -17,18 +17,6 @@ export const LINKS = [
     newTab: true,
     icon: "/images/social/linkedin.svg",
   },
-  {
-    name: "Email",
-    href: "mailto:richard@solomou.dev",
-    newTab: false,
-    icon: "/images/social/gmail.svg",
-  },
-  {
-    name: "Schedule",
-    href: "https://cal.com/richardsolomou/30min",
-    newTab: true,
-    icon: "/images/social/google-calendar.svg",
-  },
 ];
 
 export const STACK = {
@@ -92,7 +80,6 @@ export const EXPERIENCE = [
     companyIconPrint: "/images/logos/posthog.svg",
     location: "Remote",
     period: "January 2026 - Present",
-    description: ["TBD"],
   },
   {
     id: "technical-lead-keenious",

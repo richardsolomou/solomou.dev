@@ -4,14 +4,9 @@ import { LINKS } from "~/lib/data";
 
 export function Links() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4">
+    <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3">
       {LINKS.map((social) => (
-        <Button
-          asChild
-          className="text-muted-foreground transition-all duration-200 hover:text-foreground"
-          key={social.href}
-          variant="outline"
-        >
+        <Button asChild key={social.href} variant="outline">
           <Link
             data-umami-event={`${social.name.toLowerCase()}_link_clicked`}
             data-umami-event-url={social.href}

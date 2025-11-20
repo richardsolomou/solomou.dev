@@ -1,3 +1,4 @@
+import { Badge } from "@ras-sh/ui/badge";
 import { cn } from "@ras-sh/ui/utils";
 import { PROJECTS } from "~/lib/data";
 import { iconMap } from "~/lib/icons";
@@ -62,13 +63,14 @@ export function Projects() {
             {project.tags.map((tag) => {
               const Icon = iconMap[tag];
               return (
-                <span
-                  className="flex items-center gap-1.5 rounded-md bg-zinc-800 px-2 py-1 text-xs text-zinc-400"
+                <Badge
+                  className="gap-1.5 font-normal print:border-zinc-300"
                   key={tag}
+                  variant="secondary"
                 >
-                  {Icon && <Icon className="size-3" />}
-                  {tag}
-                </span>
+                  {Icon && <Icon className="size-3 print:hidden" />}
+                  <span>{tag}</span>
+                </Badge>
               );
             })}
           </div>
