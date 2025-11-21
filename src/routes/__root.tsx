@@ -4,6 +4,7 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import type * as React from "react";
 import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
 import { NotFound } from "~/components/not-found";
+import { PostHogWrapper } from "~/components/posthog-wrapper";
 import { seo } from "~/lib/seo";
 import appCss from "~/styles/app.css?url";
 
@@ -61,13 +62,6 @@ export const Route = createRootRoute({
         { rel: "manifest", href: "/site.webmanifest", color: "#fffff" },
         { rel: "icon", href: "/favicon.ico" },
       ],
-      scripts: [
-        {
-          src: "https://u.tronite.com/script.js",
-          defer: true,
-          "data-website-id": "22fab73a-710b-437b-a321-8475673b226d",
-        },
-      ],
     };
   },
   errorComponent: DefaultCatchBoundary,
@@ -82,7 +76,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="dark min-h-dvh font-sans text-foreground antialiased">
-        {children}
+        <PostHogWrapper>{children}</PostHogWrapper>
         <Scripts />
       </body>
     </html>
