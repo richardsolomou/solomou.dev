@@ -1,5 +1,6 @@
 import { Badge } from "@ras-sh/ui/badge";
 import { cn } from "@ras-sh/ui/utils";
+import { usePostHog } from "posthog-js/react";
 import { PROJECTS } from "~/lib/data";
 import { iconMap } from "~/lib/icons";
 
@@ -15,16 +16,21 @@ const getLabelStyle = (label: string) => {
 };
 
 export function Projects() {
+  const posthog = usePostHog();
+
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       {PROJECTS.map((project) => (
         <a
           className="group relative flex flex-col space-y-3 rounded-lg border border-zinc-800/50 bg-zinc-900/30 p-4 transition-all hover:border-zinc-700/50 hover:bg-zinc-900/50"
-          data-umami-event="project_link_clicked"
-          data-umami-event-project={project.name}
-          data-umami-event-url={project.url}
           href={project.url}
           key={project.name}
+          onClick={() => {
+            posthog?.capture("project_link_clicked", {
+              project: project.name,
+              url: project.url,
+            });
+          }}
           rel="noopener noreferrer"
           target="_blank"
         >

@@ -3,6 +3,7 @@ import { Button } from "@ras-sh/ui/button";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeftIcon, DownloadIcon, GlobeIcon, MailIcon } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
 import { iconMap } from "~/lib/icons";
 
@@ -13,6 +14,8 @@ export const Route = createFileRoute("/cv")({
 const MAX_EXPERIENCE_ITEMS_PRINT = 8;
 
 function CV() {
+  const posthog = usePostHog();
+
   return (
     <>
       {/* Floating Navigation */}
@@ -20,18 +23,23 @@ function CV() {
         <Button
           asChild
           className="backdrop-blur-sm"
+          onClick={() => {
+            posthog?.capture("cv_back_clicked");
+          }}
           size="icon-sm"
           variant="outline"
         >
-          <Link data-umami-event="cv_back_clicked" title="Back to home" to="/">
+          <Link title="Back to home" to="/">
             <ArrowLeftIcon className="size-4" />
           </Link>
         </Button>
 
         <Button
           className="backdrop-blur-sm"
-          data-umami-event="cv_download_clicked"
-          onClick={() => window.print()}
+          onClick={() => {
+            posthog?.capture("cv_download_clicked");
+            window.print();
+          }}
           size="icon-sm"
           title="Download PDF"
           variant="outline"
@@ -62,8 +70,10 @@ function CV() {
               <div className="flex flex-wrap items-center gap-2 sm:gap-4">
                 <a
                   className="flex items-center gap-2 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300"
-                  data-umami-event="cv_email_clicked"
                   href="mailto:richard@solomou.dev"
+                  onClick={() => {
+                    posthog?.capture("cv_email_clicked");
+                  }}
                 >
                   <MailIcon className="size-4" />
                   richard@solomou.dev
@@ -73,8 +83,10 @@ function CV() {
 
                 <a
                   className="flex items-center gap-2 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300"
-                  data-umami-event="cv_website_clicked"
                   href="https://solomou.dev"
+                  onClick={() => {
+                    posthog?.capture("cv_website_clicked");
+                  }}
                 >
                   <GlobeIcon className="size-4" />
                   solomou.dev
@@ -109,10 +121,13 @@ function CV() {
                       <p className="mb-1 text-lg text-zinc-200 print:mb-0 print:text-sm">
                         <a
                           className="inline-flex items-center gap-1 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
-                          data-umami-event="cv_company_clicked"
-                          data-umami-event-company={exp.company}
-                          data-umami-event-url={exp.companyUrl}
                           href={exp.companyUrl}
+                          onClick={() => {
+                            posthog?.capture("cv_company_clicked", {
+                              company: exp.company,
+                              url: exp.companyUrl,
+                            });
+                          }}
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -242,10 +257,13 @@ function CV() {
                       <h3 className="font-bold text-lg text-zinc-100 print:text-base">
                         <a
                           className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
-                          data-umami-event="cv_project_clicked"
-                          data-umami-event-project={project.name}
-                          data-umami-event-url={project.url}
                           href={project.url}
+                          onClick={() => {
+                            posthog?.capture("cv_project_clicked", {
+                              project: project.name,
+                              url: project.url,
+                            });
+                          }}
                           rel="noopener noreferrer"
                           target="_blank"
                         >

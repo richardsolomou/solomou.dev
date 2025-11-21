@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { usePostHog } from "posthog-js/react";
 import { Footer } from "~/components/footer";
 import { Projects } from "~/components/projects";
 import { TechStack } from "~/components/tech-stack";
@@ -8,6 +9,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
+  const posthog = usePostHog();
+
   return (
     <div className="mx-auto max-w-3xl space-y-8 px-8 py-12 sm:space-y-16 md:py-20">
       {/* Main Content */}
@@ -31,10 +34,13 @@ function Home() {
             I'm a Product Engineer at{" "}
             <a
               className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
-              data-umami-event="company_link_clicked"
-              data-umami-event-company="PostHog"
-              data-umami-event-url="https://posthog.com"
               href="https://posthog.com"
+              onClick={() => {
+                posthog?.capture("company_link_clicked", {
+                  company: "PostHog",
+                  url: "https://posthog.com",
+                });
+              }}
               rel="noopener"
               target="_blank"
             >
@@ -50,10 +56,13 @@ function Home() {
             , former Technical Lead at{" "}
             <a
               className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
-              data-umami-event="company_link_clicked"
-              data-umami-event-company="Keenious"
-              data-umami-event-url="https://keenious.com"
               href="https://keenious.com"
+              onClick={() => {
+                posthog?.capture("company_link_clicked", {
+                  company: "Keenious",
+                  url: "https://keenious.com",
+                });
+              }}
               rel="noopener"
               target="_blank"
             >
@@ -69,10 +78,13 @@ function Home() {
             , and former Founder of{" "}
             <a
               className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
-              data-umami-event="company_link_clicked"
-              data-umami-event-company="Tarrasque.io"
-              data-umami-event-url="https://tarrasque.io"
               href="https://tarrasque.io"
+              onClick={() => {
+                posthog?.capture("company_link_clicked", {
+                  company: "Tarrasque.io",
+                  url: "https://tarrasque.io",
+                });
+              }}
               rel="noopener"
               target="_blank"
             >
