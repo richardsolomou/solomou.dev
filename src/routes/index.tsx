@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Links } from "~/components/links";
+import { Footer } from "~/components/footer";
 import { Projects } from "~/components/projects";
 import { TechStack } from "~/components/tech-stack";
 
@@ -15,7 +15,7 @@ function Home() {
         {/* Avatar */}
         <img
           alt="Richard Solomou"
-          className="-mt-2 float-right mb-6 ml-6 rounded-full"
+          className="-mt-3 float-right mb-6 ml-6 rounded-full"
           height={128}
           src="/images/richard.png"
           width={128}
@@ -23,12 +23,9 @@ function Home() {
 
         {/* Intro */}
         <section>
-          <div className="mb-8 flex flex-wrap items-center gap-2 gap-y-6">
-            <h1 className="font-bold text-4xl tracking-tight">
-              Hi, I'm Richard 👋
-            </h1>
-            <Links />
-          </div>
+          <h1 className="mb-6 font-bold text-4xl tracking-tight">
+            Hi, I'm Richard 👋
+          </h1>
 
           <p className="text-lg text-zinc-300 leading-relaxed">
             I'm a Product Engineer at{" "}
@@ -99,10 +96,11 @@ function Home() {
           </h2>
           <div className="space-y-6 text-zinc-300 leading-relaxed">
             <p>
-              I've been building websites since I was 8 years old. These days, I
-              build full-stack web applications with TypeScript, React, and
-              Node.js. I love creating interfaces that explain complex things
-              simply ✨, with a focus on minimalism and clean design.
+              I've been building for the web since I was 8 years old. These
+              days, that means everything from Kubernetes infrastructure to
+              clean user interfaces. I love building products that make complex
+              things feel simple ✨, with a focus on clean code and thoughtful
+              design.
             </p>
             <p>
               At work, I'm building features that help teams understand their
@@ -137,6 +135,8 @@ function Home() {
           <TechStack />
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }
