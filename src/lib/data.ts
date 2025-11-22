@@ -17,6 +17,12 @@ export const LINKS = [
     newTab: true,
     icon: "/images/social/linkedin.svg",
   },
+  {
+    name: "X/Twitter",
+    href: "https://x.com/richardsolomou",
+    newTab: true,
+    icon: "/images/social/x.svg",
+  },
 ];
 
 export const STACK = {
