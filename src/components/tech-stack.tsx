@@ -22,7 +22,7 @@ export function TechStack() {
                     key={item}
                     variant="secondary"
                   >
-                    {Icon && <Icon className="size-3 print:hidden" />}
+                    {Icon}
                     <span>{item}</span>
                   </Badge>
                 );

@@ -225,7 +225,7 @@ export const PROJECTS = [
     name: "tro.gg",
     url: "https://tro.gg",
     description:
-      "AI-powered TTRPG campaign manager that organizes your session notes.",
+      "🧙‍♂️ AI-powered TTRPG campaign manager that turns messy session notes into an organized, living campaign wiki.",
     tags: ["TanStack Start", "Convex", "AI SDK", "TypeScript"],
     icon: "/images/logos/tro.gg.webp",
     label: "Open Beta",
@@ -234,7 +234,7 @@ export const PROJECTS = [
     name: "tarrasque.io",
     url: "https://tarrasque.io",
     description:
-      "Virtual tabletop platform for D&D. Grew to 10,000+ users before acquisition.",
+      "🎲 Touch-friendly virtual tabletop for D&D. Play for free on any device, anywhere. Focused on simplicity and speed.",
     tags: ["Next.js", "NestJS", "GraphQL", "TypeScript"],
     icon: "/images/logos/tarrasque.io.webp",
     label: "Acquired",
@@ -258,14 +258,14 @@ export const PROJECTS = [
     url: "https://remove-bg.ras.sh",
     description:
       "✂️ AI-powered background removal that runs entirely in your browser. No uploads, no paywalls, fully client-side.",
-    tags: ["React", "AI SDK", "WebAssembly"],
+    tags: ["React", "WebAssembly", "AI SDK"],
   },
   {
     name: "icon-gen.ras.sh",
     url: "https://icon-gen.ras.sh",
     description:
       "🖼️ Generate all essential icon sizes for web and mobile from a single image. Drag, drop, download.",
-    tags: ["React", "TypeScript"],
+    tags: ["React", "sharp", "TypeScript"],
   },
   {
     name: "img-to-palette.ras.sh",

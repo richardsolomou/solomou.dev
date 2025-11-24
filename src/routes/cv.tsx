@@ -226,7 +226,7 @@ function CV() {
                             key={item}
                             variant="secondary"
                           >
-                            {Icon && <Icon className="size-3 print:hidden" />}
+                            {Icon}
                             <span>{item}</span>
                           </Badge>
                         );
@@ -290,7 +290,7 @@ function CV() {
                             key={tag}
                             variant="secondary"
                           >
-                            {Icon && <Icon className="size-3 print:hidden" />}
+                            {Icon}
                             <span>{tag}</span>
                           </Badge>
                         );

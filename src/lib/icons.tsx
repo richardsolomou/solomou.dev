@@ -34,6 +34,7 @@ import {
   SiRedis,
   SiRedux,
   SiSentry,
+  SiSharp,
   SiSocketdotio,
   SiSqlite,
   SiStripe,
@@ -48,7 +49,6 @@ import {
   SiWebassembly,
   SiZod,
 } from "@icons-pack/react-simple-icons";
-import type { ComponentType } from "react";
 
 const TanStackIcon = () => (
   <svg
@@ -176,60 +176,77 @@ const AwsIcon = () => (
   </svg>
 );
 
-export const iconMap: Record<string, ComponentType<{ className?: string }>> = {
-  "AI SDK": SiVercel,
-  "Better Auth": SiBetterauth,
-  "GitHub Actions": SiGithubactions,
-  "Material UI": SiMui,
-  "Next.js": SiNextdotjs,
-  "Node.js": SiNodedotjs,
-  "Open Source": SiOpencollective,
-  "React Hook Form": SiReacthookform,
-  "Socket.io": SiSocketdotio,
-  "Tailwind CSS": SiTailwindcss,
-  "TanStack Query": SiReactquery,
-  "TanStack Start": TanStackIcon,
-  "VS Code": CodeIcon,
-  AWS: AwsIcon,
-  Azure: AzureIcon,
-  Biome: SiBiome,
-  Cloudflare: SiCloudflare,
-  Convex: ConvexIcon,
-  Docker: SiDocker,
-  Drizzle: SiDrizzle,
-  ESLint: SiEslint,
-  FastAPI: SiFastapi,
-  Figma: SiFigma,
-  GCP: SiGooglecloud,
-  Git: SiGit,
-  Grafana: SiGrafana,
-  GraphQL: SiGraphql,
-  Helm: SiHelm,
-  JavaScript: SiJavascript,
-  Kubernetes: SiKubernetes,
-  Motion: SiFramer,
-  NestJS: SiNestjs,
-  Playwright: PlaywrightIcon,
-  pnpm: SiPnpm,
-  PostgreSQL: SiPostgresql,
-  PostHog: SiPosthog,
-  Prettier: SiPrettier,
-  Prisma: SiPrisma,
-  Prometheus: SiPrometheus,
-  Python: SiPython,
-  React: SiReact,
-  Redis: SiRedis,
-  Sentry: SiSentry,
-  SQL: SiSqlite,
-  Stripe: SiStripe,
-  Terraform: SiTerraform,
-  tRPC: SiTrpc,
-  Turborepo: SiTurborepo,
-  TypeScript: SiTypescript,
-  Vercel: SiVercel,
-  Vite: SiVite,
-  Vitest: SiVitest,
-  WebAssembly: SiWebassembly,
-  Zod: SiZod,
-  Zustand: SiRedux,
+export const iconMap: Record<string, React.ReactNode> = {
+  "AI SDK": <SiVercel className="size-3 print:hidden" color="#ffffff" />,
+  "Better Auth": (
+    <SiBetterauth className="size-3 print:hidden" color="#ffffff" />
+  ),
+  "GitHub Actions": (
+    <SiGithubactions className="size-3 print:hidden" color="#ffffff" />
+  ),
+  "Material UI": <SiMui className="size-3 print:hidden" color="#ffffff" />,
+  "Next.js": <SiNextdotjs className="size-3 print:hidden" color="#ffffff" />,
+  "Node.js": <SiNodedotjs className="size-3 print:hidden" color="#ffffff" />,
+  "Open Source": (
+    <SiOpencollective className="size-3 print:hidden" color="#ffffff" />
+  ),
+  "React Hook Form": (
+    <SiReacthookform className="size-3 print:hidden" color="#ffffff" />
+  ),
+  "Socket.io": (
+    <SiSocketdotio className="size-3 print:hidden" color="#ffffff" />
+  ),
+  "Tailwind CSS": (
+    <SiTailwindcss className="size-3 print:hidden" color="#ffffff" />
+  ),
+  "TanStack Query": (
+    <SiReactquery className="size-3 print:hidden" color="#ffffff" />
+  ),
+  "TanStack Start": <TanStackIcon />,
+  "VS Code": <CodeIcon />,
+  AWS: <AwsIcon />,
+  Azure: <AzureIcon />,
+  Biome: <SiBiome className="size-3 print:hidden" color="#ffffff" />,
+  Cloudflare: <SiCloudflare className="size-3 print:hidden" color="#ffffff" />,
+  Convex: <ConvexIcon />,
+  Docker: <SiDocker className="size-3 print:hidden" color="#ffffff" />,
+  Drizzle: <SiDrizzle className="size-3 print:hidden" color="#ffffff" />,
+  ESLint: <SiEslint className="size-3 print:hidden" color="#ffffff" />,
+  FastAPI: <SiFastapi className="size-3 print:hidden" color="#ffffff" />,
+  Figma: <SiFigma className="size-3 print:hidden" color="#ffffff" />,
+  GCP: <SiGooglecloud className="size-3 print:hidden" color="#ffffff" />,
+  Git: <SiGit className="size-3 print:hidden" color="#ffffff" />,
+  Grafana: <SiGrafana className="size-3 print:hidden" color="#ffffff" />,
+  GraphQL: <SiGraphql className="size-3 print:hidden" color="#ffffff" />,
+  Helm: <SiHelm className="size-3 print:hidden" color="#ffffff" />,
+  JavaScript: <SiJavascript className="size-3 print:hidden" color="#ffffff" />,
+  Kubernetes: <SiKubernetes className="size-3 print:hidden" color="#ffffff" />,
+  Motion: <SiFramer className="size-3 print:hidden" color="#ffffff" />,
+  NestJS: <SiNestjs className="size-3 print:hidden" color="#ffffff" />,
+  Playwright: <PlaywrightIcon />,
+  pnpm: <SiPnpm className="size-3 print:hidden" color="#ffffff" />,
+  PostgreSQL: <SiPostgresql className="size-3 print:hidden" color="#ffffff" />,
+  PostHog: <SiPosthog className="size-3 print:hidden" color="#ffffff" />,
+  Prettier: <SiPrettier className="size-3 print:hidden" color="#ffffff" />,
+  Prisma: <SiPrisma className="size-3 print:hidden" color="#ffffff" />,
+  Prometheus: <SiPrometheus className="size-3 print:hidden" color="#ffffff" />,
+  Python: <SiPython className="size-3 print:hidden" color="#ffffff" />,
+  React: <SiReact className="size-3 print:hidden" color="#ffffff" />,
+  Redis: <SiRedis className="size-3 print:hidden" color="#ffffff" />,
+  Sentry: <SiSentry className="size-3 print:hidden" color="#ffffff" />,
+  SQL: <SiSqlite className="size-3 print:hidden" color="#ffffff" />,
+  Stripe: <SiStripe className="size-3 print:hidden" color="#ffffff" />,
+  Terraform: <SiTerraform className="size-3 print:hidden" color="#ffffff" />,
+  tRPC: <SiTrpc className="size-3 print:hidden" color="#ffffff" />,
+  Turborepo: <SiTurborepo className="size-3 print:hidden" color="#ffffff" />,
+  TypeScript: <SiTypescript className="size-3 print:hidden" color="#ffffff" />,
+  Vercel: <SiVercel className="size-3 print:hidden" color="#ffffff" />,
+  Vite: <SiVite className="size-3 print:hidden" color="#ffffff" />,
+  sharp: <SiSharp className="size-3 print:hidden" color="#ffffff" />,
+  Vitest: <SiVitest className="size-3 print:hidden" color="#ffffff" />,
+  WebAssembly: (
+    <SiWebassembly className="size-3 print:hidden" color="#ffffff" />
+  ),
+  Zod: <SiZod className="size-3 print:hidden" color="#ffffff" />,
+  Zustand: <SiRedux className="size-3 print:hidden" color="#ffffff" />,
 };
