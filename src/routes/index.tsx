@@ -109,20 +109,20 @@ function Home() {
           </div>
         </section>
 
-        {/* Projects */}
-        <section>
-          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
-            Personal Projects
-          </h2>
-          <Projects />
-        </section>
-
         {/* Tech Stack */}
         <section>
           <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
             Tech Stack
           </h2>
           <TechStack />
+        </section>
+
+        {/* Projects */}
+        <section>
+          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
+            Personal Projects
+          </h2>
+          <Projects />
         </section>
       </main>
 

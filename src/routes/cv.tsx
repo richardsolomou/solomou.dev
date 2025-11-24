@@ -12,6 +12,7 @@ export const Route = createFileRoute("/cv")({
 });
 
 const MAX_EXPERIENCE_ITEMS_PRINT = 8;
+const MAX_PROJECTS_PRINT = 5;
 
 function CV() {
   const posthog = usePostHog();
@@ -241,9 +242,15 @@ function CV() {
               <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
                 Personal Projects
               </h2>
-              <div className="space-y-6 print:space-y-4">
-                {PROJECTS.map((project) => (
-                  <div className="space-y-2 print:space-y-1" key={project.name}>
+              <div className="space-y-8 print:space-y-6">
+                {PROJECTS.map((project, index) => (
+                  <div
+                    className={cn(
+                      "space-y-2 print:space-y-1",
+                      index >= MAX_PROJECTS_PRINT && "print:hidden"
+                    )}
+                    key={project.name}
+                  >
                     <div className="flex items-center gap-2">
                       {project.icon && (
                         <img

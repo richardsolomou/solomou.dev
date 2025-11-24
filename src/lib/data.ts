@@ -222,14 +222,6 @@ export const EDUCATION = {
 
 export const PROJECTS = [
   {
-    name: "ras.sh",
-    url: "https://ras.sh",
-    description:
-      "My corner of the internet where I build open-source tools and experiments.",
-    tags: ["TypeScript", "React", "Node.js", "Open Source"],
-    icon: "/images/logos/ras.sh.webp",
-  },
-  {
     name: "tro.gg",
     url: "https://tro.gg",
     description:
@@ -246,6 +238,41 @@ export const PROJECTS = [
     tags: ["Next.js", "NestJS", "GraphQL", "TypeScript"],
     icon: "/images/logos/tarrasque.io.webp",
     label: "Acquired",
+  },
+  {
+    name: "local-quest.ras.sh",
+    url: "https://local-quest.ras.sh",
+    description:
+      "🗺️ Local-first AI text adventures using your browser's built-in AI. Infinite worlds generated and played entirely on your device.",
+    tags: ["React", "AI SDK", "TypeScript"],
+  },
+  {
+    name: "local-chat.ras.sh",
+    url: "https://local-chat.ras.sh",
+    description:
+      "💬 Local-first AI chat using Chrome's built-in AI. Conversations run entirely in your browser and stay on your device.",
+    tags: ["React", "AI SDK", "TypeScript"],
+  },
+  {
+    name: "remove-bg.ras.sh",
+    url: "https://remove-bg.ras.sh",
+    description:
+      "✂️ AI-powered background removal that runs entirely in your browser. No uploads, no paywalls, fully client-side.",
+    tags: ["React", "AI SDK", "WebAssembly"],
+  },
+  {
+    name: "icon-gen.ras.sh",
+    url: "https://icon-gen.ras.sh",
+    description:
+      "🖼️ Generate all essential icon sizes for web and mobile from a single image. Drag, drop, download.",
+    tags: ["React", "TypeScript"],
+  },
+  {
+    name: "img-to-palette.ras.sh",
+    url: "https://img-to-palette.ras.sh",
+    description:
+      "🎨 Generate color palettes from any image and find the nearest Tailwind colors for quick design matching.",
+    tags: ["React", "Tailwind CSS", "TypeScript"],
   },
 ];
 
