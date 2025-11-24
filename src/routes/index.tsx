@@ -31,7 +31,29 @@ function Home() {
           </h1>
 
           <p className="text-lg text-zinc-300 leading-relaxed">
-            I'm a Full-Stack Engineer and Technical Lead at{" "}
+            I'm a Product Engineer at{" "}
+            <a
+              className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
+              href="https://posthog.com"
+              onClick={() => {
+                posthog?.capture("company_link_clicked", {
+                  company: "PostHog",
+                  url: "https://posthog.com",
+                });
+              }}
+              rel="noopener"
+              target="_blank"
+            >
+              <img
+                alt="PostHog"
+                className="inline h-3 w-auto"
+                height={12}
+                src="/images/logos/posthog-white.svg"
+                width={12}
+              />
+              PostHog
+            </a>
+            , former Technical Lead at{" "}
             <a
               className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
               href="https://keenious.com"
@@ -52,8 +74,8 @@ function Home() {
                 width={12}
               />
               Keenious
-            </a>{" "}
-            and former Founder of{" "}
+            </a>
+            , and former Founder of{" "}
             <a
               className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
               href="https://tarrasque.io"
@@ -93,9 +115,9 @@ function Home() {
               design.
             </p>
             <p>
-              At work, I'm building AI features that help students discover
-              knowledge 📚. Outside of work, I create open-source apps,
-              libraries, and templates for developers and gamers 🎮.
+              At work, I'm building features that help teams understand their
+              users 📊. Outside of work, I create open-source apps, libraries,
+              and templates for developers and gamers 🎮.
             </p>
             <p>
               What drives me is seeing ideas become tools that thousands of
