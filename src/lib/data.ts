@@ -86,6 +86,7 @@ export const EXPERIENCE = [
     companyIconPrint: "/images/logos/posthog.svg",
     location: "Remote",
     period: "January 2026 - Present",
+    description: ["TBD"],
   },
   {
     id: "technical-lead-keenious",
@@ -100,7 +101,7 @@ export const EXPERIENCE = [
       "Built features using Next.js, NestJS, TypeScript, and PostgreSQL for EdTech platform serving 50+ institutions.",
       "Managed Kubernetes infrastructure on AWS and Azure, reducing deployment time by 90% with Docker for local development.",
       "Led team building AI-powered research assistant from concept to production, increasing engagement by 200%.",
-      "Implemented end-to-end testing with Playwright and optimizations improving response times by 50%.",
+      "Implemented end-to-end testing and performance optimizations improving response times by 50%.",
     ],
   },
   {
