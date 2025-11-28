@@ -1,5 +1,5 @@
+import { usePostHog } from "@posthog/react";
 import { createFileRoute } from "@tanstack/react-router";
-import { usePostHog } from "posthog-js/react";
 import { Footer } from "~/components/footer";
 import { Projects } from "~/components/projects";
 import { TechStack } from "~/components/tech-stack";

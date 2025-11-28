@@ -1,5 +1,5 @@
+import { usePostHog } from "@posthog/react";
 import { Link } from "@tanstack/react-router";
-import { usePostHog } from "posthog-js/react";
 import { LINKS } from "~/lib/data";
 
 export function Footer() {

@@ -1,9 +1,9 @@
+import { usePostHog } from "@posthog/react";
 import { Badge } from "@ras-sh/ui/badge";
 import { Button } from "@ras-sh/ui/button";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeftIcon, DownloadIcon, GlobeIcon, MailIcon } from "lucide-react";
-import { usePostHog } from "posthog-js/react";
 import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
 import { iconMap } from "~/lib/icons";
 
@@ -132,7 +132,7 @@ function CV() {
                           rel="noopener noreferrer"
                           target="_blank"
                         >
-                          {exp.companyIcon && (
+                          {!!exp.companyIcon && (
                             <>
                               <img
                                 alt={exp.company}
@@ -252,7 +252,7 @@ function CV() {
                     key={project.name}
                   >
                     <div className="flex items-center gap-2">
-                      {project.icon && (
+                      {!!project.icon && (
                         <img
                           alt={project.name}
                           className="size-5 rounded print:size-4"

@@ -4,7 +4,7 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import type * as React from "react";
 import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
 import { NotFound } from "~/components/not-found";
-import { PostHogWrapper } from "~/components/posthog-wrapper";
+import { PHProvider } from "~/components/ph-provider";
 import { seo } from "~/lib/seo";
 import appCss from "~/styles/app.css?url";
 
@@ -76,7 +76,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="dark min-h-dvh font-sans text-foreground antialiased">
-        <PostHogWrapper>{children}</PostHogWrapper>
+        <PHProvider>{children}</PHProvider>
         <Scripts />
       </body>
     </html>

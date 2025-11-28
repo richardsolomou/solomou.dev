@@ -1,6 +1,6 @@
+import { usePostHog } from "@posthog/react";
 import { Badge } from "@ras-sh/ui/badge";
 import { cn } from "@ras-sh/ui/utils";
-import { usePostHog } from "posthog-js/react";
 import { PROJECTS } from "~/lib/data";
 import { iconMap } from "~/lib/icons";
 
@@ -36,7 +36,7 @@ export function Projects() {
         >
           <div className="flex flex-wrap items-start justify-between gap-2">
             <div className="flex items-center gap-3">
-              {project.icon && (
+              {!!project.icon && (
                 <img
                   alt={project.name}
                   className="h-6 w-6 rounded"
@@ -49,7 +49,7 @@ export function Projects() {
                 {project.name}
               </h3>
             </div>
-            {project.label && (
+            {!!project.label && (
               <span
                 className={cn(
                   "-top-px -right-px absolute rounded-tr-lg rounded-bl-lg border px-2 py-1 font-medium text-xs",

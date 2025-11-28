@@ -13,4 +13,7 @@ export default defineConfig({
     viteReact(),
     tailwindcss(),
   ],
+  ssr: {
+    noExternal: ["posthog-js", "@posthog/react"],
+  },
 });
