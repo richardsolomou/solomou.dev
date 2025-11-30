@@ -48,7 +48,7 @@ function Home() {
                 alt="PostHog"
                 className="inline h-3 w-auto"
                 height={12}
-                src="/images/logos/posthog-white.svg"
+                src="/images/logos/posthog.svg"
                 width={12}
               />
               PostHog

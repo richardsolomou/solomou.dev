@@ -82,7 +82,7 @@ export const EXPERIENCE = [
     title: "Product Engineer",
     company: "PostHog",
     companyUrl: "https://posthog.com",
-    companyIcon: "/images/logos/posthog-white.svg",
+    companyIcon: "/images/logos/posthog.svg",
     companyIconPrint: "/images/logos/posthog.svg",
     location: "Remote",
     period: "January 2026 - Present",
