@@ -29,12 +29,12 @@
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
     "@icons-pack/react-simple-icons": "^13.8.0",
-    "@posthog/react": "^1.5.0",
+    "@posthog/react": "^1.5.1",
     "@ras-sh/ui": "^0.0.6",
-    "@tanstack/react-router": "^1.139.10",
-    "@tanstack/react-start": "^1.139.10",
+    "@tanstack/react-router": "^1.139.14",
+    "@tanstack/react-start": "^1.139.14",
     "lucide-react": "^0.555.0",
-    "posthog-js": "^1.298.1",
+    "posthog-js": "^1.300.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -46,12 +46,12 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
-    "lefthook": "^2.0.4",
+    "lefthook": "^2.0.6",
     "nitro": "3.0.1-alpha.1",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
     "ultracite": "6.3.8",
-    "vite": "^7.2.4",
+    "vite": "^7.2.6",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
