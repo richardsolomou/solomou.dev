@@ -56,7 +56,7 @@ function CV() {
             alt="Richard Solomou"
             className="shrink-0 rounded-full print:size-25"
             height={128}
-            src="/images/richard-face.png"
+            src="/images/richard.png"
             width={128}
           />
 
