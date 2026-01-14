@@ -114,7 +114,7 @@ function CV() {
                     )}
                     key={exp.id}
                   >
-                    <div className="-left-2.5 -top-1 absolute hidden size-4 rounded-full border-2 border-zinc-800 bg-zinc-600 sm:block print:hidden" />
+                    <div className="absolute -top-1 -left-2.5 hidden size-4 rounded-full border-2 border-zinc-800 bg-zinc-600 sm:block print:hidden" />
                     <div className="mb-4 print:mb-2">
                       <h3 className="mb-1 font-bold text-xl text-zinc-100 print:mb-0 print:text-base">
                         {exp.title}
@@ -178,7 +178,7 @@ function CV() {
                 Education
               </h2>
               <div className="relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0">
-                <div className="-left-2.5 -top-1 absolute hidden size-4 rounded-full border-zinc-800 bg-zinc-600 sm:block sm:border-2 print:hidden" />
+                <div className="absolute -top-1 -left-2.5 hidden size-4 rounded-full border-zinc-800 bg-zinc-600 sm:block sm:border-2 print:hidden" />
                 <div className="mb-4 print:mb-2">
                   <h3 className="mb-1 font-bold text-xl text-zinc-100 print:mb-0 print:text-base">
                     {EDUCATION.degree}

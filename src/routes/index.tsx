@@ -18,7 +18,7 @@ function Home() {
         {/* Avatar */}
         <img
           alt="Richard Solomou"
-          className="-mt-3 float-right mb-6 ml-6 rounded-full"
+          className="float-right -mt-3 mb-6 ml-6 rounded-full"
           height={128}
           src="/images/richard.png"
           width={128}

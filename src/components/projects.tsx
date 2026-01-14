@@ -52,7 +52,7 @@ export function Projects() {
             {!!project.label && (
               <span
                 className={cn(
-                  "-top-px -right-px absolute rounded-tr-lg rounded-bl-lg border px-2 py-1 font-medium text-xs",
+                  "absolute -top-px -right-px rounded-tr-lg rounded-bl-lg border px-2 py-1 font-medium text-xs",
                   getLabelStyle(project.label)
                 )}
               >
