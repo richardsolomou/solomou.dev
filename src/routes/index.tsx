@@ -20,7 +20,7 @@ function Home() {
           alt="Richard Solomou"
           className="float-right -mt-3 mb-6 ml-6 rounded-full"
           height={128}
-          src="/images/richard.png"
+          src="https://github.com/richardsolomou.png"
           width={128}
         />
 
