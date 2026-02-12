@@ -9,8 +9,30 @@
   --font-sans: "Geist Variable", sans-serif;
 }
 
+@page {
+  margin: 0;
+}
+
 @media print {
   * {
     color: #09090b !important;
+  }
+
+  /* Firefox doesn't fragment CSS Grid containers across print pages.
+     Use flexbox which has better print fragmentation support. */
+  [data-print-cols] {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  [data-print-cols] > :first-child {
+    flex: 2 !important;
+    min-width: 0 !important;
+  }
+
+  [data-print-cols] > :last-child {
+    flex: 1 !important;
+    min-width: 0 !important;
   }
 }

@@ -49,7 +49,7 @@ function CV() {
         </Button>
       </nav>
 
-      <div className="mx-auto max-w-7xl px-8 py-12 md:py-20 print:max-w-none print:p-4 print:py-0">
+      <div className="mx-auto max-w-7xl px-8 py-12 md:py-20 print:max-w-none print:px-8 print:py-6">
         {/* Header */}
         <header className="mb-10 flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left print:mb-6 print:gap-4">
           <img
@@ -97,9 +97,12 @@ function CV() {
           </div>
         </header>
 
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16 print:grid-cols-3 print:gap-4">
+        <div
+          className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16"
+          data-print-cols
+        >
           {/* Main Content - Experience & Education */}
-          <div className="space-y-8 lg:col-span-2 lg:space-y-12 print:col-span-2 print:space-y-4">
+          <div className="space-y-8 lg:col-span-2 lg:space-y-12 print:space-y-4">
             {/* Experience */}
             <section className="pb-4">
               <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
