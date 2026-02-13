@@ -1,6 +1,6 @@
 import { usePostHog } from "@posthog/react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Footer } from "~/components/footer";
+import { Links } from "~/components/links";
 import { Projects } from "~/components/projects";
 import { TechStack } from "~/components/tech-stack";
 
@@ -101,6 +101,8 @@ function Home() {
           </p>
         </section>
 
+        <Links />
+
         {/* About */}
         <section>
           <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
@@ -147,8 +149,6 @@ function Home() {
           <TechStack />
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

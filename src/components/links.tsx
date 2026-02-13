@@ -2,11 +2,11 @@ import { usePostHog } from "@posthog/react";
 import { Link } from "@tanstack/react-router";
 import { LINKS } from "~/lib/data";
 
-export function Footer() {
+export function Links() {
   const posthog = usePostHog();
 
   return (
-    <footer className="flex justify-center gap-6 border-zinc-800/50 border-t pt-8 text-sm text-zinc-400">
+    <div className="flex justify-center gap-8 text-base text-zinc-400">
       {LINKS.map((link) => (
         <Link
           className="flex items-center gap-2 transition-colors hover:text-zinc-100"
@@ -22,14 +22,14 @@ export function Footer() {
         >
           <img
             alt={link.name}
-            className="size-4"
-            height={16}
+            className="size-6"
+            height={32}
             src={link.icon}
-            width={16}
+            width={32}
           />
           <span>{link.name}</span>
         </Link>
       ))}
-    </footer>
+    </div>
   );
 }

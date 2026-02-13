@@ -1,11 +1,5 @@
 export const LINKS = [
   {
-    name: "CV",
-    href: "/cv",
-    newTab: false,
-    icon: "/images/social/google-docs.svg",
-  },
-  {
     name: "GitHub",
     href: "https://github.com/richardsolomou",
     newTab: true,
