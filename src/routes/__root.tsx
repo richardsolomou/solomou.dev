@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import geistWoff2 from "@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url";
+import ibmPlexSansWoff2 from "@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-ext-wght-normal.woff2?url";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import type * as React from "react";
 import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
@@ -38,7 +38,7 @@ export const Route = createRootRoute({
           rel: "preload",
           as: "font",
           type: "font/woff2",
-          href: geistWoff2,
+          href: ibmPlexSansWoff2,
           crossOrigin: "anonymous",
         },
         { rel: "canonical", href: canonicalUrl },

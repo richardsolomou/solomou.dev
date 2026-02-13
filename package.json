@@ -27,7 +27,7 @@
     "fix": "ultracite fix --unsafe"
   },
   "dependencies": {
-    "@fontsource-variable/geist": "^5.2.8",
+    "@fontsource-variable/ibm-plex-sans": "^5.2.8",
     "@icons-pack/react-simple-icons": "^13.11.2",
     "@posthog/react": "^1.7.1",
     "@ras-sh/ui": "^0.0.6",
