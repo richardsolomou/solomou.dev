@@ -6,15 +6,13 @@ export function TechStack() {
   return (
     <div className="grid gap-6 sm:grid-cols-2">
       {Object.entries(STACK).map(([category, tech]) => {
-        const allTech = [...tech.visible, ...tech.hidden];
-
         return (
           <div className="space-y-3" key={category}>
             <h3 className="font-semibold text-sm text-zinc-100 uppercase tracking-wider">
               {category}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {allTech.map((item) => {
+              {tech.map((item) => {
                 const Icon = iconMap[item];
                 return (
                   <Badge

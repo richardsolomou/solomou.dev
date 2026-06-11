@@ -4,13 +4,7 @@ import { Button } from "@ras-sh/ui/button";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeftIcon, DownloadIcon, GlobeIcon, MailIcon } from "lucide-react";
-import {
-  EDUCATION,
-  EXPERIENCE,
-  LANGUAGES,
-  PROJECTS,
-  SKILLS,
-} from "../lib/data";
+import { EDUCATION, EXPERIENCE, LANGUAGES, SKILLS } from "../lib/data";
 import { iconMap } from "../lib/icons";
 
 export const Route = createFileRoute("/cv")({
@@ -18,7 +12,6 @@ export const Route = createFileRoute("/cv")({
 });
 
 const MAX_EXPERIENCE_ITEMS_PRINT = 7;
-const MAX_PROJECTS_PRINT = 5;
 
 function CV() {
   const posthog = usePostHog();
@@ -166,9 +159,7 @@ function CV() {
                     <ul className="space-y-3 text-zinc-300 leading-relaxed print:space-y-1 print:text-sm">
                       {exp.description?.map((item) => (
                         <li className="flex" key={item}>
-                          <span className="mt-1.5 mr-3 text-xs text-zinc-500 print:mt-1">
-                            ▸
-                          </span>
+                          <span className="mt-1.5 mr-3 text-xs text-zinc-500 print:mt-1">▸</span>
                           <span className="flex-1">{item}</span>
                         </li>
                       ))}
@@ -199,9 +190,7 @@ function CV() {
                 <ul className="space-y-3 text-zinc-300 leading-relaxed print:space-y-1 print:text-sm">
                   {EDUCATION.achievements.map((achievement) => (
                     <li className="flex" key={achievement}>
-                      <span className="mt-1.5 mr-3 text-xs text-zinc-500 print:mt-1">
-                        ▸
-                      </span>
+                      <span className="mt-1.5 mr-3 text-xs text-zinc-500 print:mt-1">▸</span>
                       <span className="flex-1">{achievement}</span>
                     </li>
                   ))}
@@ -243,78 +232,12 @@ function CV() {
               </div>
             </section>
 
-            {/* Projects */}
-            <section>
-              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
-                Personal Projects
-              </h2>
-              <div className="space-y-8 print:space-y-6">
-                {PROJECTS.map((project, index) => (
-                  <div
-                    className={cn(
-                      "space-y-2 print:space-y-1",
-                      index >= MAX_PROJECTS_PRINT && "print:hidden",
-                    )}
-                    key={project.name}
-                  >
-                    <div className="flex items-center gap-2">
-                      {!!project.icon && (
-                        <img
-                          alt={project.name}
-                          className="size-5 rounded print:size-4"
-                          height={20}
-                          src={project.icon}
-                          width={20}
-                        />
-                      )}
-                      <h3 className="font-bold text-lg text-zinc-100 print:text-base">
-                        <a
-                          className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
-                          href={project.url}
-                          onClick={() => {
-                            posthog?.capture("cv_project_clicked", {
-                              project: project.name,
-                              url: project.url,
-                            });
-                          }}
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          {project.name}
-                        </a>
-                      </h3>
-                    </div>
-                    <p className="text-zinc-300 leading-relaxed print:text-sm">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 print:gap-1">
-                      {project.tags.map((tag) => {
-                        const Icon = iconMap[tag];
-                        return (
-                          <Badge
-                            className="gap-1.5 font-normal print:border-zinc-300"
-                            key={tag}
-                            variant="secondary"
-                          >
-                            {Icon}
-                            <span>{tag}</span>
-                          </Badge>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
             {/* Languages */}
             <section>
               <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
                 Languages
               </h2>
-              <p className="text-zinc-300 print:text-sm">
-                {LANGUAGES.join(", ")}
-              </p>
+              <p className="text-zinc-300 print:text-sm">{LANGUAGES.join(", ")}</p>
             </section>
           </div>
         </div>

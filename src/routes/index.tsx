@@ -1,7 +1,6 @@
 import { usePostHog } from "@posthog/react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Links } from "../components/links";
-import { Projects } from "../components/projects";
 import { TechStack } from "../components/tech-stack";
 
 export const Route = createFileRoute("/")({
@@ -26,9 +25,7 @@ function Home() {
 
         {/* Intro */}
         <section>
-          <h1 className="mb-6 font-bold text-4xl tracking-tight">
-            Hi, I'm Richard 👋
-          </h1>
+          <h1 className="mb-6 font-bold text-4xl tracking-tight">Hi, I'm Richard 👋</h1>
 
           <p className="text-lg text-zinc-300 leading-relaxed">
             I'm a Product Engineer at{" "}
@@ -110,35 +107,26 @@ function Home() {
           </h2>
           <div className="space-y-6 text-zinc-300 leading-relaxed">
             <p>
-              I've been building for the web since I was 8 years old. These
-              days, that means everything from Kubernetes infrastructure to
-              clean user interfaces. I love building products that make complex
-              things feel simple ✨, with a focus on clean code and thoughtful
-              design.
+              I've been building for the web since I was 8 years old. These days, that means
+              everything from Kubernetes infrastructure to clean user interfaces. I love building
+              products that make complex things feel simple ✨, with a focus on clean code and
+              thoughtful design.
             </p>
             <p>
-              At work, I'm building features that help teams understand their
-              users 📊. Outside of work, I create open-source apps, libraries,
-              and templates for developers and gamers 🎮.
+              At work, I'm building features that help teams understand their users 📊. Outside of
+              work, I create open-source apps, libraries, and templates for developers and gamers
+              🎮.
             </p>
             <p>
-              What drives me is seeing ideas become tools that thousands of
-              people use every day 🚀. That feedback loop - building, shipping,
-              and seeing real impact - is what keeps me up at night coding.
+              What drives me is seeing ideas become tools that thousands of people use every day 🚀.
+              That feedback loop - building, shipping, and seeing real impact - is what keeps me up
+              at night coding.
             </p>
             <p>
-              When I'm not coding, I'm being a dad 👶, walking my husky 🐶,
-              hanging out with my cat 🐈‍⬛, or drinking coffee ☕️.
+              When I'm not coding, I'm being a dad 👶, walking my husky 🐶, hanging out with my cat
+              🐈‍⬛, or drinking coffee ☕️.
             </p>
           </div>
-        </section>
-
-        {/* Projects */}
-        <section>
-          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
-            Personal Projects
-          </h2>
-          <Projects />
         </section>
 
         {/* Tech Stack */}

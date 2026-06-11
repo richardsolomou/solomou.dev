@@ -20,62 +20,63 @@ export const LINKS = [
 ];
 
 export const STACK = {
-  Frontend: {
-    visible: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "TanStack Start",
-      "Tailwind CSS",
-    ],
-    hidden: [
-      "Vite",
-      "TanStack Query",
-      "Kea",
-      "Zustand",
-      "Electron",
-      "Material UI",
-      "React Hook Form",
-      "Zod",
-      "Motion",
-    ],
-  },
-  Backend: {
-    visible: [
-      "Node.js",
-      "PostgreSQL",
-      "Drizzle",
-      "Stripe",
-      "Convex",
-      "Better Auth",
-    ],
-    hidden: [
-      "Rust",
-      "Django",
-      "OpenTelemetry",
-      "tRPC",
-      "Prisma",
-      "NestJS",
-      "Redis",
-      "Socket.io",
-      "GraphQL",
-    ],
-  },
-  "Dev Tools": {
-    visible: [
-      "VS Code",
-      "Git",
-      "pnpm",
-      "Turborepo",
-      "GitHub Actions",
-      "Vitest",
-    ],
-    hidden: ["Biome", "Playwright", "ESLint", "Prettier"],
-  },
-  "Cloud & Infrastructure": {
-    visible: ["Vercel", "AWS", "Cloudflare", "Docker", "Kubernetes"],
-    hidden: ["Azure", "GCP", "Helm", "Terraform"],
-  },
+  Frontend: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "TanStack Start",
+    "Tailwind CSS",
+    "Vite",
+    "TanStack Query",
+    "Kea",
+    "Zustand",
+    "Electron",
+    "Material UI",
+    "React Hook Form",
+    "Zod",
+    "Motion",
+  ],
+  Backend: [
+    "Node.js",
+    "PostgreSQL",
+    "Drizzle",
+    "Stripe",
+    "Convex",
+    "Better Auth",
+    "Go",
+    "Rust",
+    "Django",
+    "OpenTelemetry",
+    "tRPC",
+    "Prisma",
+    "NestJS",
+    "Redis",
+    "Socket.io",
+    "GraphQL",
+  ],
+  "Dev Tools": [
+    "VS Code",
+    "Git",
+    "pnpm",
+    "Turborepo",
+    "GitHub Actions",
+    "Vitest",
+    "Biome",
+    "Playwright",
+    "ESLint",
+    "Prettier",
+  ],
+  "Cloud & Infrastructure": [
+    "Vercel",
+    "AWS",
+    "Cloudflare",
+    "Docker",
+    "Kubernetes",
+    "Azure",
+    "GCP",
+    "Helm",
+    "Terraform",
+  ],
 };
 
 export const EXPERIENCE = [
@@ -218,9 +219,7 @@ export const EXPERIENCE = [
     companyUrl: "https://netquest.cy",
     location: "Nicosia, Cyprus",
     period: "June 2008 - August 2008",
-    description: [
-      "Performed QA testing and built website layouts using Photoshop, HTML, and CSS.",
-    ],
+    description: ["Performed QA testing and built website layouts using Photoshop, HTML, and CSS."],
   },
 ];
 
@@ -236,64 +235,8 @@ export const EDUCATION = {
   ],
 };
 
-export const PROJECTS = [
-  {
-    name: "tro.gg",
-    url: "https://tro.gg",
-    description:
-      "🧙‍♂️ AI-powered TTRPG campaign manager that turns messy session notes into an organized, living campaign wiki.",
-    tags: ["TanStack Start", "Convex", "AI SDK", "TypeScript"],
-    icon: "/images/logos/tro.gg.webp",
-    label: "Open Beta",
-  },
-  {
-    name: "tarrasque.io",
-    url: "https://tarrasque.io",
-    description:
-      "🎲 Touch-friendly virtual tabletop for D&D. Play for free on any device, anywhere. Focused on simplicity and speed.",
-    tags: ["Next.js", "NestJS", "GraphQL", "TypeScript"],
-    icon: "/images/logos/tarrasque.io.webp",
-    label: "Acquired",
-  },
-  {
-    name: "local-quest.ras.sh",
-    url: "https://local-quest.ras.sh",
-    description:
-      "🗺️ Local-first AI text adventures using your browser's built-in AI. Infinite worlds generated and played entirely on your device.",
-    tags: ["React", "AI SDK", "TypeScript"],
-  },
-  {
-    name: "local-chat.ras.sh",
-    url: "https://local-chat.ras.sh",
-    description:
-      "💬 Local-first AI chat using Chrome's built-in AI. Conversations run entirely in your browser and stay on your device.",
-    tags: ["React", "AI SDK", "TypeScript"],
-  },
-  {
-    name: "remove-bg.ras.sh",
-    url: "https://remove-bg.ras.sh",
-    description:
-      "✂️ AI-powered background removal that runs entirely in your browser. No uploads, no paywalls, fully client-side.",
-    tags: ["React", "WebAssembly", "AI SDK"],
-  },
-  {
-    name: "icon-gen.ras.sh",
-    url: "https://icon-gen.ras.sh",
-    description:
-      "🖼️ Generate all essential icon sizes for web and mobile from a single image. Drag, drop, download.",
-    tags: ["React", "sharp", "TypeScript"],
-  },
-  {
-    name: "img-to-palette.ras.sh",
-    url: "https://img-to-palette.ras.sh",
-    description:
-      "🎨 Generate color palettes from any image and find the nearest Tailwind colors for quick design matching.",
-    tags: ["React", "Tailwind CSS", "TypeScript"],
-  },
-];
-
 export const SKILLS = {
-  Languages: ["TypeScript", "JavaScript", "Python", "Rust", "SQL"],
+  Languages: ["TypeScript", "JavaScript", "Python", "Go", "Rust", "SQL"],
   Frontend: [
     "React",
     "Next.js",
