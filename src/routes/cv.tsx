@@ -4,14 +4,20 @@ import { Button } from "@ras-sh/ui/button";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeftIcon, DownloadIcon, GlobeIcon, MailIcon } from "lucide-react";
-import { EDUCATION, EXPERIENCE, LANGUAGES, PROJECTS, SKILLS } from "~/lib/data";
-import { iconMap } from "~/lib/icons";
+import {
+  EDUCATION,
+  EXPERIENCE,
+  LANGUAGES,
+  PROJECTS,
+  SKILLS,
+} from "../lib/data";
+import { iconMap } from "../lib/icons";
 
 export const Route = createFileRoute("/cv")({
   component: CV,
 });
 
-const MAX_EXPERIENCE_ITEMS_PRINT = 8;
+const MAX_EXPERIENCE_ITEMS_PRINT = 7;
 const MAX_PROJECTS_PRINT = 5;
 
 function CV() {
@@ -110,7 +116,7 @@ function CV() {
                   <div
                     className={cn(
                       "relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0",
-                      index >= MAX_EXPERIENCE_ITEMS_PRINT && "print:hidden"
+                      index >= MAX_EXPERIENCE_ITEMS_PRINT && "print:hidden",
                     )}
                     key={exp.id}
                   >
@@ -247,7 +253,7 @@ function CV() {
                   <div
                     className={cn(
                       "space-y-2 print:space-y-1",
-                      index >= MAX_PROJECTS_PRINT && "print:hidden"
+                      index >= MAX_PROJECTS_PRINT && "print:hidden",
                     )}
                     key={project.name}
                   >

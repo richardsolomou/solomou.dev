@@ -1,8 +1,8 @@
 import { usePostHog } from "@posthog/react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Links } from "~/components/links";
-import { Projects } from "~/components/projects";
-import { TechStack } from "~/components/tech-stack";
+import { Links } from "../components/links";
+import { Projects } from "../components/projects";
+import { TechStack } from "../components/tech-stack";
 
 export const Route = createFileRoute("/")({
   component: Home,

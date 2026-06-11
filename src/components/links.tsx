@@ -1,6 +1,6 @@
 import { usePostHog } from "@posthog/react";
 import { Link } from "@tanstack/react-router";
-import { LINKS } from "~/lib/data";
+import { LINKS } from "../lib/data";
 
 export function Links() {
   const posthog = usePostHog();
@@ -20,13 +20,7 @@ export function Links() {
           target={link.newTab ? "_blank" : "_self"}
           to={link.href}
         >
-          <img
-            alt={link.name}
-            className="size-6"
-            height={32}
-            src={link.icon}
-            width={32}
-          />
+          <img alt={link.name} className="size-6" height={32} src={link.icon} width={32} />
           <span>{link.name}</span>
         </Link>
       ))}

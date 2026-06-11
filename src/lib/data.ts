@@ -31,7 +31,9 @@ export const STACK = {
     hidden: [
       "Vite",
       "TanStack Query",
+      "Kea",
       "Zustand",
+      "Electron",
       "Material UI",
       "React Hook Form",
       "Zod",
@@ -47,7 +49,17 @@ export const STACK = {
       "Convex",
       "Better Auth",
     ],
-    hidden: ["tRPC", "Prisma", "NestJS", "Redis", "Socket.io", "GraphQL"],
+    hidden: [
+      "Rust",
+      "Django",
+      "OpenTelemetry",
+      "tRPC",
+      "Prisma",
+      "NestJS",
+      "Redis",
+      "Socket.io",
+      "GraphQL",
+    ],
   },
   "Dev Tools": {
     visible: [
@@ -64,10 +76,6 @@ export const STACK = {
     visible: ["Vercel", "AWS", "Cloudflare", "Docker", "Kubernetes"],
     hidden: ["Azure", "GCP", "Helm", "Terraform"],
   },
-  "Monitoring & Analytics": {
-    visible: ["PostHog", "Sentry"],
-    hidden: ["Grafana", "Prometheus"],
-  },
 };
 
 export const EXPERIENCE = [
@@ -80,7 +88,10 @@ export const EXPERIENCE = [
     companyIconPrint: "/images/logos/posthog.svg",
     location: "Remote",
     period: "January 2026 - Present",
-    description: ["TBD"],
+    description: [
+      "Built core features for PostHog's LLM Analytics product, including the Playground, BYOK provider infrastructure, and trial evaluation lifecycle.",
+      "Created the PostHog Convex SDK and contributed to multiple client SDKs across JavaScript, Python, and Node.js.",
+    ],
   },
   {
     id: "technical-lead-keenious",
@@ -282,7 +293,7 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = {
-  Languages: ["TypeScript", "JavaScript", "Python", "SQL"],
+  Languages: ["TypeScript", "JavaScript", "Python", "Rust", "SQL"],
   Frontend: [
     "React",
     "Next.js",
@@ -293,6 +304,8 @@ export const SKILLS = {
     "Zustand",
     "Material UI",
     "React Hook Form",
+    "Kea",
+    "Electron",
     "Zod",
     "Motion",
     "Figma",
@@ -304,6 +317,8 @@ export const SKILLS = {
     "Stripe",
     "Convex",
     "Better Auth",
+    "Django",
+    "OpenTelemetry",
     "tRPC",
     "Prisma",
     "NestJS",
@@ -335,8 +350,6 @@ export const SKILLS = {
     "Helm",
     "Terraform",
   ],
-  "Monitoring & Analytics": ["PostHog", "Sentry", "Grafana", "Prometheus"],
-  Other: ["DDD", "SOA", "TDD", "OOP", "Agile (Scrum, Kanban)"],
 };
 
 export const LANGUAGES = ["English", "Greek"];

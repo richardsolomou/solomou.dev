@@ -2,11 +2,11 @@
 import ibmPlexSansWoff2 from "@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-ext-wght-normal.woff2?url";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import type * as React from "react";
-import { DefaultCatchBoundary } from "~/components/default-catch-boundary";
-import { NotFound } from "~/components/not-found";
-import { PHProvider } from "~/components/ph-provider";
-import { seo } from "~/lib/seo";
-import appCss from "~/styles/app.css?url";
+import { DefaultCatchBoundary } from "../components/default-catch-boundary";
+import { NotFound } from "../components/not-found";
+import { PHProvider } from "../components/ph-provider";
+import { seo } from "../lib/seo";
+import appCss from "../styles/app.css?url";
 
 const CANONICAL_DOMAIN = "https://solomou.dev";
 
@@ -27,8 +27,7 @@ export const Route = createRootRoute({
         },
         ...seo({
           title: "solomou.dev",
-          description:
-            "Full-Stack Engineer 👨‍💻, proud dad 👶, and coffee junkie ☕️",
+          description: "Full-Stack Engineer 👨‍💻, proud dad 👶, and coffee junkie ☕️",
           canonical: canonicalUrl,
         }),
       ],

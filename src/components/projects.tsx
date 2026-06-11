@@ -1,8 +1,8 @@
 import { usePostHog } from "@posthog/react";
 import { Badge } from "@ras-sh/ui/badge";
 import { cn } from "@ras-sh/ui/utils";
-import { PROJECTS } from "~/lib/data";
-import { iconMap } from "~/lib/icons";
+import { PROJECTS } from "../lib/data";
+import { iconMap } from "../lib/icons";
 
 const getLabelStyle = (label: string) => {
   switch (label) {
@@ -53,7 +53,7 @@ export function Projects() {
               <span
                 className={cn(
                   "absolute -top-px -right-px rounded-tr-lg rounded-bl-lg border px-2 py-1 font-medium text-xs",
-                  getLabelStyle(project.label)
+                  getLabelStyle(project.label),
                 )}
               >
                 {project.label}

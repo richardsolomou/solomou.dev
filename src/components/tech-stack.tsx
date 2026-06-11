@@ -1,6 +1,6 @@
 import { Badge } from "@ras-sh/ui/badge";
-import { STACK } from "~/lib/data";
-import { iconMap } from "~/lib/icons";
+import { STACK } from "../lib/data";
+import { iconMap } from "../lib/icons";
 
 export function TechStack() {
   return (

@@ -2,8 +2,10 @@ import {
   SiBetterauth,
   SiBiome,
   SiCloudflare,
+  SiDjango,
   SiDocker,
   SiDrizzle,
+  SiElectron,
   SiEslint,
   SiFastapi,
   SiFigma,
@@ -21,6 +23,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiOpencollective,
+  SiOpentelemetry,
   SiPnpm,
   SiPostgresql,
   SiPosthog,
@@ -33,6 +36,7 @@ import {
   SiReactquery,
   SiRedis,
   SiRedux,
+  SiRust,
   SiSentry,
   SiSharp,
   SiSocketdotio,
@@ -49,6 +53,31 @@ import {
   SiWebassembly,
   SiZod,
 } from "@icons-pack/react-simple-icons";
+
+const KeaIcon = () => (
+  <svg
+    className="size-3 print:hidden"
+    viewBox="0 0 200 200"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>Kea</title>
+    <g transform="translate(1, 10)" fill="none" fillRule="evenodd">
+      <ellipse
+        stroke="currentColor"
+        strokeWidth="11"
+        fill="none"
+        cx="99"
+        cy="90"
+        rx="90"
+        ry="90"
+      />
+      <g transform="translate(0, 31)" fill="currentColor">
+        <path d="M149.293,27.388 C147.905,23.238 145.276,21.85 145.276,21.85 C145.273,21.85 144.723,23.579 143.407,24.375 C142.091,25.171 140.463,24.895 140.463,24.895 C140.463,24.895 143.69,39.649 142.618,47.91 C141.545,56.167 138.214,61.952 136.443,66.199 C134.675,70.447 129.807,78.766 125.118,84.073 C120.425,89.387 106.263,103.091 100.172,107.007 C94.082,110.919 90.387,111.413 90.387,111.413 C90.387,111.413 96.36,116.49 99.263,118.153 C102.165,119.817 103.997,119.986 105.876,119.944 C107.751,119.905 109.555,119.46 110.715,118.745 C111.875,118.033 114.289,117.851 115.183,119.106 C116.077,120.354 116.343,121.871 116.343,121.871 C116.343,121.871 121.839,122.05 123.535,123.347 C125.231,124.643 125.144,127.636 125.144,127.636 C125.144,127.636 124.191,124.806 122.596,124.806 C120.997,124.806 122.31,126.59 119.681,126.499 C117.048,126.405 109.766,124.568 103.611,124.006 C97.456,123.444 90.969,124.195 88.152,124.568 C85.331,124.945 81.574,125.933 80.066,125.134 C78.565,124.334 78.425,123.116 78.425,123.116 C78.425,123.116 77.86,123.161 76.781,124.055 C75.699,124.945 75.461,126.171 75.461,126.171 C75.461,126.171 74.571,123.772 76.309,122.596 C78.048,121.419 79.127,121.657 79.127,121.657 C79.127,121.657 79.738,120.672 81.382,120.86 C83.03,121.046 91.674,120.672 92.568,120.672 C93.462,120.672 94.684,120.438 93.413,119.307 C92.146,118.179 85.708,112.073 85.708,112.073 C85.705,112.073 77.635,113.11 70.863,112.853 C64.09,112.593 54.091,112.015 54.091,112.015 C54.091,112.015 15.659,144.155 8.432,149.92 C1.201,155.688 -0.772,154.739 0.252,150.797 C1.272,146.855 10.84,134.37 10.84,134.37 C10.836,134.37 9.745,132.543 10.986,129.261 C12.227,125.972 14.418,121.299 14.418,121.299 C14.414,121.299 10.953,125.647 9.888,126.996 C8.822,128.348 7.609,128.991 8.393,125.862 C9.179,122.732 16.829,107.549 28.853,91.388 C40.874,75.231 53.155,66.18 53.155,66.18 C53.155,66.18 65.017,51.488 72.803,44.969 C80.593,38.45 88.649,32.834 90.553,31.385 C92.454,29.939 93.722,28.128 94.81,25.681 C95.896,23.238 103.682,9.111 109.841,3.859 C115.999,-1.396 127.204,-0.203 131.175,1.191 C135.143,2.592 139.17,5.5 140.678,7.233 C142.189,8.965 142.189,10.365 142.189,10.365 C142.185,10.365 147.216,12.208 149.959,15.786 C152.695,19.364 155.045,26.796 149.949,35.213 C149.949,35.213 150.674,31.541 149.293,27.388 Z" />
+        <circle stroke="white" cx="131" cy="12" r="2" />
+      </g>
+    </g>
+  </svg>
+);
 
 const TanStackIcon = () => (
   <svg
@@ -209,8 +238,10 @@ export const iconMap: Record<string, React.ReactNode> = {
   Biome: <SiBiome className="size-3 print:hidden" color="#ffffff" />,
   Cloudflare: <SiCloudflare className="size-3 print:hidden" color="#ffffff" />,
   Convex: <ConvexIcon />,
+  Django: <SiDjango className="size-3 print:hidden" color="#ffffff" />,
   Docker: <SiDocker className="size-3 print:hidden" color="#ffffff" />,
   Drizzle: <SiDrizzle className="size-3 print:hidden" color="#ffffff" />,
+  Electron: <SiElectron className="size-3 print:hidden" color="#ffffff" />,
   ESLint: <SiEslint className="size-3 print:hidden" color="#ffffff" />,
   FastAPI: <SiFastapi className="size-3 print:hidden" color="#ffffff" />,
   Figma: <SiFigma className="size-3 print:hidden" color="#ffffff" />,
@@ -220,11 +251,15 @@ export const iconMap: Record<string, React.ReactNode> = {
   GraphQL: <SiGraphql className="size-3 print:hidden" color="#ffffff" />,
   Helm: <SiHelm className="size-3 print:hidden" color="#ffffff" />,
   JavaScript: <SiJavascript className="size-3 print:hidden" color="#ffffff" />,
+  Kea: <KeaIcon />,
   Kubernetes: <SiKubernetes className="size-3 print:hidden" color="#ffffff" />,
   Motion: <SiFramer className="size-3 print:hidden" color="#ffffff" />,
   NestJS: <SiNestjs className="size-3 print:hidden" color="#ffffff" />,
   Playwright: <PlaywrightIcon />,
   pnpm: <SiPnpm className="size-3 print:hidden" color="#ffffff" />,
+  OpenTelemetry: (
+    <SiOpentelemetry className="size-3 print:hidden" color="#ffffff" />
+  ),
   PostgreSQL: <SiPostgresql className="size-3 print:hidden" color="#ffffff" />,
   PostHog: <SiPosthog className="size-3 print:hidden" color="#ffffff" />,
   Prettier: <SiPrettier className="size-3 print:hidden" color="#ffffff" />,
@@ -233,6 +268,7 @@ export const iconMap: Record<string, React.ReactNode> = {
   Python: <SiPython className="size-3 print:hidden" color="#ffffff" />,
   React: <SiReact className="size-3 print:hidden" color="#ffffff" />,
   Redis: <SiRedis className="size-3 print:hidden" color="#ffffff" />,
+  Rust: <SiRust className="size-3 print:hidden" color="#ffffff" />,
   Sentry: <SiSentry className="size-3 print:hidden" color="#ffffff" />,
   SQL: <SiSqlite className="size-3 print:hidden" color="#ffffff" />,
   Stripe: <SiStripe className="size-3 print:hidden" color="#ffffff" />,
