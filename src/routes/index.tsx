@@ -123,8 +123,7 @@ function Home() {
               at night coding.
             </p>
             <p>
-              When I'm not coding, I'm being a dad 👶, walking my husky 🐶, hanging out with my cat
-              🐈‍⬛, or drinking coffee ☕️.
+              When I'm not coding, I'm being a dad 👶, walking my husky 🐶, or drinking coffee ☕️.
             </p>
           </div>
         </section>
