@@ -17,6 +17,18 @@ export const LINKS = [
     newTab: true,
     icon: "/images/social/x.svg",
   },
+  {
+    name: "Twitch",
+    href: "https://twitch.tv/richardsolomou",
+    newTab: true,
+    icon: "/images/social/twitch.svg",
+  },
+  {
+    name: "YouTube",
+    href: "https://youtube.com/@richardsolomou",
+    newTab: true,
+    icon: "/images/social/youtube.svg",
+  },
 ];
 
 export const STACK = {

@@ -9,7 +9,7 @@ export function Links() {
     <div className="flex justify-center gap-8 text-base text-zinc-400">
       {LINKS.map((link) => (
         <Link
-          className="flex items-center gap-2 transition-colors hover:text-zinc-100"
+          className="transition-colors hover:text-zinc-100"
           key={link.href}
           onClick={() => {
             posthog?.capture(`${link.name.toLowerCase()}_link_clicked`, {
@@ -21,7 +21,6 @@ export function Links() {
           to={link.href}
         >
           <img alt={link.name} className="size-6" height={32} src={link.icon} width={32} />
-          <span>{link.name}</span>
         </Link>
       ))}
     </div>
