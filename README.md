@@ -8,7 +8,7 @@
 - **Styling**: <img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS" width="16" height="16" /> [Tailwind CSS](https://tailwindcss.com)
 - **Build**: <img src="https://cdn.simpleicons.org/vite" alt="Vite" width="16" height="16" /> [Vite](https://vite.dev)
 - **Analytics**: <img src="https://solomou.dev/images/logos/posthog.svg" alt="PostHog" width="16" height="16" /> [PostHog](https://posthog.com)
-- **Deployment**: <img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel" width="16" height="16" /> [Vercel](https://vercel.com)
+- **Deployment**: <img src="https://cdn.simpleicons.org/cloudflare/f38020" alt="Cloudflare" width="16" height="16" /> [Cloudflare Workers](https://workers.cloudflare.com)
 
 ## Development
 

@@ -43,6 +43,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "1.53.1",
     "@ras-sh/typescript-config": "^0.0.3",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^25.5.2",
@@ -50,13 +51,13 @@
     "@types/react-dom": "^19.2.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "nitro": "3.0.260311-beta",
     "oxfmt": "^0.44.0",
     "oxlint": "^1.59.0",
     "oxlint-tsgolint": "^0.20.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2",
-    "vite": "^8.0.7"
+    "vite": "^8.0.7",
+    "wrangler": "4.125.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs,cjs}": "pnpm lint",
