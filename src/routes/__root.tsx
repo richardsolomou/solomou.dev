@@ -27,7 +27,7 @@ export const Route = createRootRoute({
         },
         ...seo({
           title: "solomou.dev",
-          description: "Full-Stack Engineer 👨‍💻, proud dad 👶, and coffee junkie ☕️",
+          description: "Product Engineer at PostHog 👨‍💻, proud dad 👶, and coffee junkie ☕️",
           canonical: canonicalUrl,
         }),
       ],

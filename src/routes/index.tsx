@@ -1,7 +1,9 @@
 import { usePostHog } from "@posthog/react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Links } from "../components/links";
+import { Projects } from "../components/projects";
 import { TechStack } from "../components/tech-stack";
+import { EXPERIENCE } from "../lib/data";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -11,9 +13,8 @@ function Home() {
   const posthog = usePostHog();
 
   return (
-    <div className="mx-auto max-w-3xl space-y-8 px-8 py-12 sm:space-y-16 md:py-20">
-      {/* Main Content */}
-      <main className="space-y-16">
+    <div className="mx-auto max-w-3xl px-8 py-12 md:py-20 xl:grid xl:max-w-7xl xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] xl:gap-20">
+      <header className="space-y-16">
         {/* Avatar */}
         <img
           alt="Richard Solomou"
@@ -50,7 +51,7 @@ function Home() {
               />
               PostHog
             </a>
-            , former Technical Lead at{" "}
+            , working on our MCP server. Previously Technical Lead at{" "}
             <a
               className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
               href="https://keenious.com"
@@ -72,7 +73,7 @@ function Home() {
               />
               Keenious
             </a>
-            , and former Founder of{" "}
+            , and founder of{" "}
             <a
               className="inline-flex items-center gap-1 underline transition-colors hover:text-zinc-100"
               href="https://tarrasque.io"
@@ -93,39 +94,76 @@ function Home() {
                 width={12}
               />
               Tarrasque.io
-            </a>
-            .
+            </a>{" "}
+            (acquired).
           </p>
         </section>
 
-        <Links />
+        <div className="-mt-4 mb-12">
+          <Links />
+        </div>
 
         {/* About */}
         <section>
           <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
-            What I do
+            What I Do
           </h2>
           <div className="space-y-6 text-zinc-300 leading-relaxed">
             <p>
-              I've been building for the web since I was 8 years old. These days, that means
-              everything from Kubernetes infrastructure to clean user interfaces. I love building
-              products that make complex things feel simple ✨, with a focus on clean code and
-              thoughtful design.
+              I've been building for the web since I was 8. These days that means anything from Go
+              services and Kubernetes to the UI on top.
             </p>
             <p>
-              At work, I'm building features that help teams understand their users 📊. Outside of
-              work, I create open-source apps, libraries, and templates for developers and gamers
-              🎮.
-            </p>
-            <p>
-              What drives me is seeing ideas become tools that thousands of people use every day 🚀.
-              That feedback loop - building, shipping, and seeing real impact - is what keeps me up
-              at night coding.
+              Before PostHog MCP, I worked on our AI Gateway and AI Observability. Outside work, I
+              make open-source tools and software for tabletop gamers.
             </p>
             <p>
               When I'm not coding, I'm being a dad 👶, walking my husky 🐶, or drinking coffee ☕️.
             </p>
           </div>
+        </section>
+
+        {/* Experience */}
+        <section>
+          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
+            Experience
+          </h2>
+          <ol className="space-y-4">
+            {EXPERIENCE.slice(0, 5).map((exp) => (
+              <li className="flex items-baseline gap-3" key={exp.id}>
+                <img
+                  alt=""
+                  className="size-4 shrink-0 translate-y-0.5 object-contain"
+                  height={16}
+                  src={exp.companyIcon}
+                  width={16}
+                />
+                <div className="min-w-0 flex-1">
+                  <p className="text-zinc-100">{exp.title}</p>
+                  <p className="text-sm text-zinc-400">{exp.company}</p>
+                </div>
+                <span className="shrink-0 text-sm text-zinc-500 tabular-nums">
+                  {exp.period.replace(/[A-Za-z]+ (\d{4})/g, "$1")}
+                </span>
+              </li>
+            ))}
+          </ol>
+          <Link
+            className="mt-6 inline-block text-sm text-zinc-400 underline decoration-zinc-600 transition-colors hover:text-zinc-100"
+            to="/cv"
+          >
+            Full CV →
+          </Link>
+        </section>
+      </header>
+
+      <main className="mt-16 space-y-16 xl:mt-0">
+        {/* Projects */}
+        <section>
+          <h2 className="mb-6 border-zinc-800/50 border-b pb-2 font-bold text-2xl text-zinc-100">
+            Personal Projects
+          </h2>
+          <Projects />
         </section>
 
         {/* Tech Stack */}

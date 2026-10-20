@@ -1,11 +1,11 @@
 import { Badge } from "@ras-sh/ui/badge";
-import { STACK } from "../lib/data";
+import { SKILLS } from "../lib/data";
 import { iconMap } from "../lib/icons";
 
 export function TechStack() {
   return (
     <div className="grid gap-6 sm:grid-cols-2">
-      {Object.entries(STACK).map(([category, tech]) => {
+      {Object.entries(SKILLS).map(([category, tech]) => {
         return (
           <div className="space-y-3" key={category}>
             <h3 className="font-semibold text-sm text-zinc-100 uppercase tracking-wider">

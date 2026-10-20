@@ -3,15 +3,44 @@ import { Badge } from "@ras-sh/ui/badge";
 import { Button } from "@ras-sh/ui/button";
 import { cn } from "@ras-sh/ui/utils";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeftIcon, DownloadIcon, GlobeIcon, MailIcon } from "lucide-react";
-import { EDUCATION, EXPERIENCE, LANGUAGES, SKILLS } from "../lib/data";
+import { ArrowLeftIcon, DownloadIcon, GlobeIcon } from "lucide-react";
+import { Fragment } from "react";
+import {
+  EARLIER_EXPERIENCE,
+  EDUCATION,
+  EXPERIENCE,
+  LANGUAGES,
+  PROJECTS,
+  SKILLS,
+} from "../lib/data";
 import { iconMap } from "../lib/icons";
+import { EmailIcon, GitHubIcon, LinkedInIcon } from "../lib/social-icons";
 
 export const Route = createFileRoute("/cv")({
   component: CV,
 });
 
-const MAX_EXPERIENCE_ITEMS_PRINT = 7;
+const MAX_EXPERIENCE_ITEMS_PRINT = 6;
+const MAX_PROJECTS_PRINT = 5;
+
+const CONTACT = [
+  {
+    label: "richard@solomou.dev",
+    href: "mailto:richard@solomou.dev",
+    icon: <EmailIcon className="size-4" />,
+  },
+  { label: "solomou.dev", href: "https://solomou.dev", icon: <GlobeIcon className="size-4" /> },
+  {
+    label: "richardsolomou",
+    href: "https://github.com/richardsolomou",
+    icon: <GitHubIcon className="size-4" />,
+  },
+  {
+    label: "richardsolomou",
+    href: "https://linkedin.com/in/richardsolomou",
+    icon: <LinkedInIcon className="size-4" />,
+  },
+];
 
 function CV() {
   const posthog = usePostHog();
@@ -64,33 +93,25 @@ function CV() {
               Richard Solomou
             </h1>
             <p className="mt-2 font-light text-xl text-zinc-300 sm:text-2xl print:mt-1 print:text-lg">
-              Full-Stack Engineer & Technical Lead
+              Product Engineer
             </p>
             <div className="mt-4 flex flex-col flex-wrap gap-2 text-base text-zinc-400 sm:justify-start sm:text-lg print:mt-2 print:text-sm">
-              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-                <a
-                  className="flex items-center gap-2 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300"
-                  href="mailto:richard@solomou.dev"
-                  onClick={() => {
-                    posthog?.capture("cv_email_clicked");
-                  }}
-                >
-                  <MailIcon className="size-4" />
-                  richard@solomou.dev
-                </a>
-
-                <span className="hidden text-zinc-600 sm:block">•</span>
-
-                <a
-                  className="flex items-center gap-2 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300"
-                  href="https://solomou.dev"
-                  onClick={() => {
-                    posthog?.capture("cv_website_clicked");
-                  }}
-                >
-                  <GlobeIcon className="size-4" />
-                  solomou.dev
-                </a>
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4 print:gap-2">
+                {CONTACT.map((contact, index) => (
+                  <Fragment key={contact.href}>
+                    {index > 0 && <span className="hidden text-zinc-600 sm:block">•</span>}
+                    <a
+                      className="flex items-center gap-2 underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:gap-1"
+                      href={contact.href}
+                      onClick={() => {
+                        posthog?.capture("cv_contact_clicked", { url: contact.href });
+                      }}
+                    >
+                      {contact.icon}
+                      {contact.label}
+                    </a>
+                  </Fragment>
+                ))}
               </div>
             </div>
           </div>
@@ -101,14 +122,14 @@ function CV() {
           <div className="space-y-8 lg:col-span-2 lg:space-y-12 print:col-span-2 print:space-y-4">
             {/* Experience */}
             <section className="pb-4">
-              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
+              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:break-after-avoid print:text-lg">
                 Experience
               </h2>
-              <div className="space-y-10 print:space-y-6.5">
+              <div className="space-y-10 print:space-y-4">
                 {EXPERIENCE.map((exp, index) => (
                   <div
                     className={cn(
-                      "relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0",
+                      "relative border-zinc-600 sm:border-l-3 sm:pl-8 print:break-inside-avoid print:border-l-0 print:pl-0",
                       index >= MAX_EXPERIENCE_ITEMS_PRINT && "print:hidden",
                     )}
                     key={exp.id}
@@ -166,15 +187,36 @@ function CV() {
                     </ul>
                   </div>
                 ))}
+                <div className="sm:pl-8 print:hidden">
+                  <h3 className="mb-2 font-semibold text-sm text-zinc-100 uppercase tracking-wider">
+                    Earlier
+                  </h3>
+                  <ul className="space-y-1 text-zinc-400">
+                    {EARLIER_EXPERIENCE.map((exp) => (
+                      <li key={exp.company}>
+                        {exp.title},{" "}
+                        <a
+                          className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300"
+                          href={exp.companyUrl}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          {exp.company}
+                        </a>{" "}
+                        ({exp.period})
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </section>
 
             {/* Education */}
             <section>
-              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
+              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:break-after-avoid print:text-lg">
                 Education
               </h2>
-              <div className="relative border-zinc-600 sm:border-l-3 sm:pl-8 print:border-l-0 print:pl-0">
+              <div className="relative border-zinc-600 sm:border-l-3 sm:pl-8 print:break-inside-avoid print:border-l-0 print:pl-0">
                 <div className="absolute -top-1 -left-2.5 hidden size-4 rounded-full border-zinc-800 bg-zinc-600 sm:block sm:border-2 print:hidden" />
                 <div className="mb-4 print:mb-2">
                   <h3 className="mb-1 font-bold text-xl text-zinc-100 print:mb-0 print:text-base">
@@ -203,12 +245,12 @@ function CV() {
           <div className="space-y-8 lg:space-y-12 print:space-y-6">
             {/* Skills */}
             <section className="pb-4">
-              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
+              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:break-after-avoid print:text-lg">
                 Skills
               </h2>
               <div className="space-y-6 print:space-y-4">
                 {Object.entries(SKILLS).map(([category, items]) => (
-                  <div className="space-y-2.5" key={category}>
+                  <div className="space-y-2.5 print:break-inside-avoid" key={category}>
                     <h3 className="font-semibold text-sm text-zinc-100 uppercase tracking-wider print:text-xs">
                       {category}
                     </h3>
@@ -232,9 +274,73 @@ function CV() {
               </div>
             </section>
 
+            {/* Projects */}
+            <section>
+              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:break-after-avoid print:text-lg">
+                Personal Projects
+              </h2>
+              <div className="space-y-8 print:space-y-6">
+                {PROJECTS.map((project, index) => (
+                  <div
+                    className={cn(
+                      "space-y-2 print:break-inside-avoid print:space-y-1",
+                      index >= MAX_PROJECTS_PRINT && "print:hidden",
+                    )}
+                    key={project.name}
+                  >
+                    <div className="flex items-center gap-2">
+                      {!!project.icon && (
+                        <img
+                          alt={project.name}
+                          className="size-5 rounded print:size-4"
+                          height={20}
+                          src={project.icon}
+                          width={20}
+                        />
+                      )}
+                      <h3 className="font-bold text-lg text-zinc-100 print:text-base">
+                        <a
+                          className="underline decoration-zinc-500 transition-colors hover:text-white hover:decoration-zinc-300 print:no-underline"
+                          href={project.url}
+                          onClick={() => {
+                            posthog?.capture("cv_project_clicked", {
+                              project: project.name,
+                              url: project.url,
+                            });
+                          }}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          {project.name}
+                        </a>
+                      </h3>
+                    </div>
+                    <p className="text-zinc-300 leading-relaxed print:text-sm">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 print:gap-1">
+                      {project.tags.map((tag) => {
+                        const Icon = iconMap[tag];
+                        return (
+                          <Badge
+                            className="gap-1.5 font-normal print:border-zinc-300"
+                            key={tag}
+                            variant="secondary"
+                          >
+                            {Icon}
+                            <span>{tag}</span>
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
             {/* Languages */}
             <section>
-              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:text-lg">
+              <h2 className="mb-8 border-zinc-700 border-b pb-2 font-bold text-2xl text-zinc-100 print:mb-4 print:break-after-avoid print:text-lg">
                 Languages
               </h2>
               <p className="text-zinc-300 print:text-sm">{LANGUAGES.join(", ")}</p>
