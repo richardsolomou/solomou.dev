@@ -91,13 +91,6 @@ export const PROJECTS = [
     label: "Acquired",
   },
   {
-    name: "@posthog/convex",
-    url: "https://github.com/PostHog/posthog-js/tree/main/packages/convex",
-    description: "🦔 PostHog's official Convex SDK, with analytics and feature flags.",
-    tags: ["Convex", "PostHog", "TypeScript"],
-    icon: "/images/logos/posthog.svg",
-  },
-  {
     name: "remove-bg.ras.sh",
     url: "https://remove-bg.ras.sh",
     description: "✂️ Background removal that runs entirely in your browser.",
