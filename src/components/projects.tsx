@@ -78,6 +78,10 @@ export function Projects() {
           </div>
         </a>
       ))}
+
+      <div className="relative hidden items-center justify-center rounded-lg border border-zinc-800/30 border-dashed sm:flex bg-zinc-900/10 p-4 opacity-60">
+        <p className="text-sm text-zinc-400">Building something new…</p>
+      </div>
     </div>
   );
 }
