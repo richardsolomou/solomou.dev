@@ -46,7 +46,7 @@
     "@cloudflare/vite-plugin": "1.53.1",
     "@ras-sh/typescript-config": "^0.0.3",
     "@tailwindcss/vite": "^4.2.2",
-    "@types/node": "^25.5.2",
+    "@types/node": "^26.4.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "husky": "^9.1.7",
