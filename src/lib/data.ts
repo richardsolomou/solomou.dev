@@ -71,16 +71,18 @@ export const PROJECTS = [
   {
     name: "stl.quest",
     url: "https://stl.quest",
-    description: "⚡ A private request queue for 3D printing.",
+    description:
+      "⚡ A private 3D-print request and production queue for resin and filament printers.",
     tags: ["TanStack Start", "PostgreSQL", "Stripe", "TypeScript"],
     icon: "/images/logos/stl.quest.svg",
   },
   {
-    name: "basekit.ras.sh",
-    url: "https://basekit.ras.sh",
-    description: "🧲 Magnetised miniature bases and Gridfinity holders, ready to print.",
+    name: "hobbykit.app",
+    url: "https://hobbykit.app",
+    description:
+      "🧲 Printable bases, trays, holders, and paint racks for the tabletop hobby, sized exactly how you need them.",
     tags: ["React", "Three.js", "TypeScript"],
-    icon: "/images/logos/basekit.svg",
+    icon: "/images/logos/hobbykit.app.svg",
   },
   {
     name: "tarrasque.io",
